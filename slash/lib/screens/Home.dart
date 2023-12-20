@@ -31,7 +31,9 @@ class _HomeScreenState extends State<HomeScreen> {
         List<dynamic> data = jsonResponse['data'];
 
         // Convert each element to a Product object
-        products = data.map((item) => Product.fromJson(item)).toList();
+        setState(() {
+          products = data.map((item) => Product.fromJson(item)).toList();
+        });
         print('Number of books about http: ${products.length.toString()}.');
       } else {
         print('Request failed with status: ${response.statusCode}.');

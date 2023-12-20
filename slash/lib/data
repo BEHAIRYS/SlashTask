@@ -1,426 +1,845 @@
 {
-    "statusCode": 200,
-    "message": "Find all products successfully",
-    "pagination": {
-        "pages": null
+    "data": {
+        "id": 22,
+        "name": "Wall painting",
+        "description": "Warm and calming wall painting",
+        "brand_id": 4,
+        "bosta_size_id": 1,
+        "product_rating": 0,
+        "estimated_days_preparing": 5,
+        "SizeChart": null,
+        "subCategory": {
+            "id": 2,
+            "name": "Mobile Covers"
+        },
+        "variations": [
+            {
+                "id": 68,
+                "price": 1010,
+                "quantity": 1,
+                "inStock": true,
+                "ProductVarientImages": [
+                    {
+                        "id": 127,
+                        "image_path": "https://firebasestorage.googleapis.com/v0/b/slash-f711b.appspot.com/o/images%2Fproduct-variants%2F1702842151610image_picker_2D257B4C-6500-4BB9-ADAD-BA7594B78586-7089-000008B2B1A54B9E.jpg?alt=media&token=4cad311e-9cbe-4191-95aa-e61b651bcbdc",
+                        "product_varient_id": null,
+                        "createdAt": "2023-12-17T19:42:33.844Z",
+                        "updatedAt": "2023-12-17T19:42:33.844Z"
+                    },
+                    {
+                        "id": 128,
+                        "image_path": "https://firebasestorage.googleapis.com/v0/b/slash-f711b.appspot.com/o/images%2Fproduct-variants%2F1702842151623image_picker_55240B63-8841-4763-BDDE-97BF9FE7E414-7089-000008B2B423465A.jpg?alt=media&token=5ba71fbc-fbad-4550-b2cc-b050f8701dff",
+                        "product_varient_id": null,
+                        "createdAt": "2023-12-17T19:42:33.844Z",
+                        "updatedAt": "2023-12-17T19:42:33.844Z"
+                    }
+                ],
+                "productPropertiesValues": [],
+                "productStatus": "APPROVED",
+                "isDefault": true,
+                "product_variation_status_id": 2
+            }
+        ],
+        "avaiableProperties": [],
+        "brandName": "Interns",
+        "brandImage": "https://firebasestorage.googleapis.com/v0/b/slash-f711b.appspot.com/o/images%2Fbrands%2F1702834720203image_picker_D2A78E9A-EC1F-438C-83C6-AD5011B25C73-7089-00000892F07CC209.png?alt=media&token=5e5c9cc5-e896-4dc9-bed8-56126195f112"
     },
-    "data": [
-        {
-            "id": 22,
-            "name": "Wall painting",
-            "description": "Warm and calming wall painting",
-            "sub_category_id": 2,
-            "brand_id": 4,
-            "bosta_size_id": 1,
-            "createdAt": "2023-12-17T19:42:26.607Z",
-            "updatedAt": "2023-12-17T19:42:26.607Z",
-            "deletedAt": null,
-            "product_rating": 0,
-            "estimated_days_preparing": 5,
-            "Brands": {
-                "id": 4,
-                "brand_name": "Interns",
-                "brand_facebook_page_link": null,
-                "brand_instagram_page_link": null,
-                "brand_website_link": null,
-                "brand_mobile_number": "01001412578",
-                "brand_email_address": "test@gmail.com",
-                "tax_id_number": null,
-                "brand_description": "For testing purposes",
-                "brand_logo_image_path": "https://firebasestorage.googleapis.com/v0/b/slash-f711b.appspot.com/o/images%2Fbrands%2F1702834720203image_picker_D2A78E9A-EC1F-438C-83C6-AD5011B25C73-7089-00000892F07CC209.png?alt=media&token=5e5c9cc5-e896-4dc9-bed8-56126195f112",
-                "brand_status_id": 3,
-                "brand_store_address_id": null,
-                "brand_category_id": 1,
-                "deletedAt": null,
-                "createdAt": "2023-12-17T17:38:41.380Z",
-                "updatedAt": "2023-12-17T17:40:26.631Z",
-                "brand_seller_id": 1,
-                "brand_id": null,
-                "slash_contract_path": null,
-                "brand_rating": 0,
-                "days_limit_to_return": 1,
-                "planId": null
-            },
-            "ProductVariations": [
-                {
-                    "id": 68,
-                    "product_id": 22,
-                    "price": 1010,
-                    "quantity": 1,
-                    "is_default": true,
-                    "deletedAt": null,
-                    "createdAt": "2023-12-17T19:42:33.844Z",
-                    "updatedAt": "2023-12-17T19:57:49.076Z",
-                    "product_variation_status_id": 2,
-                    "ProductStatusLookups": {
-                        "id": 2,
-                        "name": "APPROVED",
-                        "createdAt": "2023-09-12T18:47:56.767Z",
-                        "updatedAt": "2023-09-12T18:47:56.767Z"
-                    },
-                    "ProductVarientImages": [
-                        {
-                            "id": 127,
-                            "image_path": "https://firebasestorage.googleapis.com/v0/b/slash-f711b.appspot.com/o/images%2Fproduct-variants%2F1702842151610image_picker_2D257B4C-6500-4BB9-ADAD-BA7594B78586-7089-000008B2B1A54B9E.jpg?alt=media&token=4cad311e-9cbe-4191-95aa-e61b651bcbdc",
-                            "product_varient_id": null,
-                            "createdAt": "2023-12-17T19:42:33.844Z",
-                            "updatedAt": "2023-12-17T19:42:33.844Z"
-                        },
-                        {
-                            "id": 128,
-                            "image_path": "https://firebasestorage.googleapis.com/v0/b/slash-f711b.appspot.com/o/images%2Fproduct-variants%2F1702842151623image_picker_55240B63-8841-4763-BDDE-97BF9FE7E414-7089-000008B2B423465A.jpg?alt=media&token=5ba71fbc-fbad-4550-b2cc-b050f8701dff",
-                            "product_varient_id": null,
-                            "createdAt": "2023-12-17T19:42:33.844Z",
-                            "updatedAt": "2023-12-17T19:42:33.844Z"
-                        }
-                    ]
-                }
-            ],
-            "SubCategories": {
-                "id": 2,
-                "name": "Mobile Covers",
-                "deletedAt": null,
-                "createdAt": "2023-12-17T18:09:21.812Z",
-                "updatedAt": "2023-12-17T18:09:21.812Z",
-                "category_id": 1,
-                "image_path": "https://firebasestorage.googleapis.com/v0/b/slash-f711b.appspot.com/o/images%2Fcategories%2F1702836560790Slash-Logo.png?alt=media&token=67fc6b14-399d-4825-872b-34536cca90f6"
-            },
-            "SizeChart": null
+    "message": "Find product successfully",
+    "statusCode": 200
+}
+{
+    "data": {
+        "id": 21,
+        "name": "Scarf",
+        "description": "scarf",
+        "brand_id": 4,
+        "bosta_size_id": 2,
+        "product_rating": 0,
+        "estimated_days_preparing": 1,
+        "SizeChart": null,
+        "subCategory": {
+            "id": 2,
+            "name": "Mobile Covers"
         },
-        {
-            "id": 21,
-            "name": "Scarf",
-            "description": "scarf",
-            "sub_category_id": 2,
-            "brand_id": 4,
-            "bosta_size_id": 2,
-            "createdAt": "2023-12-17T19:27:09.317Z",
-            "updatedAt": "2023-12-17T19:27:09.317Z",
-            "deletedAt": null,
-            "product_rating": 0,
-            "estimated_days_preparing": 1,
-            "Brands": {
-                "id": 4,
-                "brand_name": "Interns",
-                "brand_facebook_page_link": null,
-                "brand_instagram_page_link": null,
-                "brand_website_link": null,
-                "brand_mobile_number": "01001412578",
-                "brand_email_address": "test@gmail.com",
-                "tax_id_number": null,
-                "brand_description": "For testing purposes",
-                "brand_logo_image_path": "https://firebasestorage.googleapis.com/v0/b/slash-f711b.appspot.com/o/images%2Fbrands%2F1702834720203image_picker_D2A78E9A-EC1F-438C-83C6-AD5011B25C73-7089-00000892F07CC209.png?alt=media&token=5e5c9cc5-e896-4dc9-bed8-56126195f112",
-                "brand_status_id": 3,
-                "brand_store_address_id": null,
-                "brand_category_id": 1,
-                "deletedAt": null,
-                "createdAt": "2023-12-17T17:38:41.380Z",
-                "updatedAt": "2023-12-17T17:40:26.631Z",
-                "brand_seller_id": 1,
-                "brand_id": null,
-                "slash_contract_path": null,
-                "brand_rating": 0,
-                "days_limit_to_return": 1,
-                "planId": null
-            },
-            "ProductVariations": [
-                {
-                    "id": 66,
-                    "product_id": 21,
-                    "price": 600,
-                    "quantity": 10,
-                    "is_default": true,
-                    "deletedAt": null,
-                    "createdAt": "2023-12-17T19:27:15.431Z",
-                    "updatedAt": "2023-12-17T19:57:36.464Z",
-                    "product_variation_status_id": 2,
-                    "ProductStatusLookups": {
-                        "id": 2,
-                        "name": "APPROVED",
-                        "createdAt": "2023-09-12T18:47:56.767Z",
-                        "updatedAt": "2023-09-12T18:47:56.767Z"
+        "variations": [
+            {
+                "id": 66,
+                "price": 600,
+                "quantity": 10,
+                "inStock": true,
+                "ProductVarientImages": [
+                    {
+                        "id": 122,
+                        "image_path": "https://firebasestorage.googleapis.com/v0/b/slash-f711b.appspot.com/o/images%2Fproduct-variants%2F1702841234152image_picker_A1AB03B4-EF4F-4EF3-A856-E91764672AE1-7089-000008AD6B84996C.jpg?alt=media&token=06ba48dc-a710-49a0-b625-7beae5665992",
+                        "product_varient_id": null,
+                        "createdAt": "2023-12-17T19:27:15.431Z",
+                        "updatedAt": "2023-12-17T19:27:15.431Z"
                     },
-                    "ProductVarientImages": [
-                        {
-                            "id": 122,
-                            "image_path": "https://firebasestorage.googleapis.com/v0/b/slash-f711b.appspot.com/o/images%2Fproduct-variants%2F1702841234152image_picker_A1AB03B4-EF4F-4EF3-A856-E91764672AE1-7089-000008AD6B84996C.jpg?alt=media&token=06ba48dc-a710-49a0-b625-7beae5665992",
-                            "product_varient_id": null,
-                            "createdAt": "2023-12-17T19:27:15.431Z",
-                            "updatedAt": "2023-12-17T19:27:15.431Z"
-                        },
-                        {
-                            "id": 123,
-                            "image_path": "https://firebasestorage.googleapis.com/v0/b/slash-f711b.appspot.com/o/images%2Fproduct-variants%2F1702841234156image_picker_F27F567B-7308-4C42-8F70-2647C9ED14D2-7089-000008AD71C9F9D0.jpg?alt=media&token=a63405ac-26c3-445e-8577-6693928c7ddb",
-                            "product_varient_id": null,
-                            "createdAt": "2023-12-17T19:27:15.431Z",
-                            "updatedAt": "2023-12-17T19:27:15.431Z"
-                        }
-                    ]
-                }
-            ],
-            "SubCategories": {
-                "id": 2,
-                "name": "Mobile Covers",
-                "deletedAt": null,
-                "createdAt": "2023-12-17T18:09:21.812Z",
-                "updatedAt": "2023-12-17T18:09:21.812Z",
-                "category_id": 1,
-                "image_path": "https://firebasestorage.googleapis.com/v0/b/slash-f711b.appspot.com/o/images%2Fcategories%2F1702836560790Slash-Logo.png?alt=media&token=67fc6b14-399d-4825-872b-34536cca90f6"
+                    {
+                        "id": 123,
+                        "image_path": "https://firebasestorage.googleapis.com/v0/b/slash-f711b.appspot.com/o/images%2Fproduct-variants%2F1702841234156image_picker_F27F567B-7308-4C42-8F70-2647C9ED14D2-7089-000008AD71C9F9D0.jpg?alt=media&token=a63405ac-26c3-445e-8577-6693928c7ddb",
+                        "product_varient_id": null,
+                        "createdAt": "2023-12-17T19:27:15.431Z",
+                        "updatedAt": "2023-12-17T19:27:15.431Z"
+                    }
+                ],
+                "productPropertiesValues": [
+                    {
+                        "value": "cotton",
+                        "property": "Materials"
+                    }
+                ],
+                "productStatus": "APPROVED",
+                "isDefault": true,
+                "product_variation_status_id": 2
             },
-            "SizeChart": null
+            {
+                "id": 67,
+                "price": 800,
+                "quantity": 12,
+                "inStock": true,
+                "ProductVarientImages": [
+                    {
+                        "id": 124,
+                        "image_path": "https://firebasestorage.googleapis.com/v0/b/slash-f711b.appspot.com/o/images%2Fproduct-variants%2F1702841669123image_picker_27D4C9F7-5B2B-4FDC-9B34-0FD2456F18FB-7089-000008AFF1E29D5F.jpg?alt=media&token=b3f7a4b1-01de-4abd-9de4-57284dce0b63",
+                        "product_varient_id": null,
+                        "createdAt": "2023-12-17T19:34:31.350Z",
+                        "updatedAt": "2023-12-17T19:34:31.350Z"
+                    },
+                    {
+                        "id": 125,
+                        "image_path": "https://firebasestorage.googleapis.com/v0/b/slash-f711b.appspot.com/o/images%2Fproduct-variants%2F1702841669125image_picker_2347F7A9-D49D-465C-9711-405A2A0CEDBC-7089-000008AFF75595E9.jpg?alt=media&token=42b91c91-a47c-4de2-a87c-96af8d56eef9",
+                        "product_varient_id": null,
+                        "createdAt": "2023-12-17T19:34:31.350Z",
+                        "updatedAt": "2023-12-17T19:34:31.350Z"
+                    },
+                    {
+                        "id": 126,
+                        "image_path": "https://firebasestorage.googleapis.com/v0/b/slash-f711b.appspot.com/o/images%2Fproduct-variants%2F1702841669125image_picker_DFA2002A-A3D2-4ECC-94F3-1CBFB598499D-7089-000008AFFD51045B.jpg?alt=media&token=35e3888e-cc95-4503-b1d0-516d1cfc5d90",
+                        "product_varient_id": null,
+                        "createdAt": "2023-12-17T19:34:31.350Z",
+                        "updatedAt": "2023-12-17T19:34:31.350Z"
+                    }
+                ],
+                "productPropertiesValues": [
+                    {
+                        "value": "wool",
+                        "property": "Materials"
+                    }
+                ],
+                "productStatus": "APPROVED",
+                "isDefault": false,
+                "product_variation_status_id": 2
+            }
+        ],
+        "avaiableProperties": [
+            {
+                "property": "Materials",
+                "values": [
+                    {
+                        "value": "cotton",
+                        "id": 66
+                    },
+                    {
+                        "value": "wool",
+                        "id": 67
+                    }
+                ]
+            }
+        ],
+        "brandName": "Interns",
+        "brandImage": "https://firebasestorage.googleapis.com/v0/b/slash-f711b.appspot.com/o/images%2Fbrands%2F1702834720203image_picker_D2A78E9A-EC1F-438C-83C6-AD5011B25C73-7089-00000892F07CC209.png?alt=media&token=5e5c9cc5-e896-4dc9-bed8-56126195f112"
+    },
+    "message": "Find product successfully",
+    "statusCode": 200
+}
+{
+    "data": {
+        "id": 20,
+        "name": "Hijab light",
+        "description": "Sports hijab light",
+        "brand_id": 4,
+        "bosta_size_id": 1,
+        "product_rating": 0,
+        "estimated_days_preparing": 2,
+        "SizeChart": null,
+        "subCategory": {
+            "id": 2,
+            "name": "Mobile Covers"
         },
-        {
-            "id": 20,
-            "name": "Hijab light",
-            "description": "Sports hijab light",
-            "sub_category_id": 2,
-            "brand_id": 4,
-            "bosta_size_id": 1,
-            "createdAt": "2023-12-17T19:22:22.888Z",
-            "updatedAt": "2023-12-17T19:22:22.888Z",
-            "deletedAt": null,
-            "product_rating": 0,
-            "estimated_days_preparing": 2,
-            "Brands": {
-                "id": 4,
-                "brand_name": "Interns",
-                "brand_facebook_page_link": null,
-                "brand_instagram_page_link": null,
-                "brand_website_link": null,
-                "brand_mobile_number": "01001412578",
-                "brand_email_address": "test@gmail.com",
-                "tax_id_number": null,
-                "brand_description": "For testing purposes",
-                "brand_logo_image_path": "https://firebasestorage.googleapis.com/v0/b/slash-f711b.appspot.com/o/images%2Fbrands%2F1702834720203image_picker_D2A78E9A-EC1F-438C-83C6-AD5011B25C73-7089-00000892F07CC209.png?alt=media&token=5e5c9cc5-e896-4dc9-bed8-56126195f112",
-                "brand_status_id": 3,
-                "brand_store_address_id": null,
-                "brand_category_id": 1,
-                "deletedAt": null,
-                "createdAt": "2023-12-17T17:38:41.380Z",
-                "updatedAt": "2023-12-17T17:40:26.631Z",
-                "brand_seller_id": 1,
-                "brand_id": null,
-                "slash_contract_path": null,
-                "brand_rating": 0,
-                "days_limit_to_return": 1,
-                "planId": null
-            },
-            "ProductVariations": [
-                {
-                    "id": 63,
-                    "product_id": 20,
-                    "price": 250,
-                    "quantity": 5,
-                    "is_default": true,
-                    "deletedAt": null,
-                    "createdAt": "2023-12-17T19:22:26.696Z",
-                    "updatedAt": "2023-12-17T19:57:16.514Z",
-                    "product_variation_status_id": 2,
-                    "ProductStatusLookups": {
-                        "id": 2,
-                        "name": "APPROVED",
-                        "createdAt": "2023-09-12T18:47:56.767Z",
-                        "updatedAt": "2023-09-12T18:47:56.767Z"
+        "variations": [
+            {
+                "id": 63,
+                "price": 250,
+                "quantity": 5,
+                "inStock": true,
+                "ProductVarientImages": [
+                    {
+                        "id": 115,
+                        "image_path": "https://firebasestorage.googleapis.com/v0/b/slash-f711b.appspot.com/o/images%2Fproduct-variants%2F1702840944790image_picker_FC424AFC-9E3F-4862-803A-0E84111B7DE1-7089-000008ABDDE64772.jpg?alt=media&token=bde3ebf0-440f-4169-87ce-2fd87e9d17eb",
+                        "product_varient_id": null,
+                        "createdAt": "2023-12-17T19:22:26.696Z",
+                        "updatedAt": "2023-12-17T19:22:26.696Z"
                     },
-                    "ProductVarientImages": [
-                        {
-                            "id": 115,
-                            "image_path": "https://firebasestorage.googleapis.com/v0/b/slash-f711b.appspot.com/o/images%2Fproduct-variants%2F1702840944790image_picker_FC424AFC-9E3F-4862-803A-0E84111B7DE1-7089-000008ABDDE64772.jpg?alt=media&token=bde3ebf0-440f-4169-87ce-2fd87e9d17eb",
-                            "product_varient_id": null,
-                            "createdAt": "2023-12-17T19:22:26.696Z",
-                            "updatedAt": "2023-12-17T19:22:26.696Z"
-                        },
-                        {
-                            "id": 116,
-                            "image_path": "https://firebasestorage.googleapis.com/v0/b/slash-f711b.appspot.com/o/images%2Fproduct-variants%2F1702840944791image_picker_4662974B-EC91-451A-9C72-8746A9CFAA0E-7089-000008ABE0A3A25A.jpg?alt=media&token=bf45ef80-55bb-4ce7-87e3-55093f7ebcc7",
-                            "product_varient_id": null,
-                            "createdAt": "2023-12-17T19:22:26.696Z",
-                            "updatedAt": "2023-12-17T19:22:26.696Z"
-                        }
-                    ]
-                }
-            ],
-            "SubCategories": {
-                "id": 2,
-                "name": "Mobile Covers",
-                "deletedAt": null,
-                "createdAt": "2023-12-17T18:09:21.812Z",
-                "updatedAt": "2023-12-17T18:09:21.812Z",
-                "category_id": 1,
-                "image_path": "https://firebasestorage.googleapis.com/v0/b/slash-f711b.appspot.com/o/images%2Fcategories%2F1702836560790Slash-Logo.png?alt=media&token=67fc6b14-399d-4825-872b-34536cca90f6"
+                    {
+                        "id": 116,
+                        "image_path": "https://firebasestorage.googleapis.com/v0/b/slash-f711b.appspot.com/o/images%2Fproduct-variants%2F1702840944791image_picker_4662974B-EC91-451A-9C72-8746A9CFAA0E-7089-000008ABE0A3A25A.jpg?alt=media&token=bf45ef80-55bb-4ce7-87e3-55093f7ebcc7",
+                        "product_varient_id": null,
+                        "createdAt": "2023-12-17T19:22:26.696Z",
+                        "updatedAt": "2023-12-17T19:22:26.696Z"
+                    }
+                ],
+                "productPropertiesValues": [
+                    {
+                        "value": "999FA0",
+                        "property": "Color"
+                    }
+                ],
+                "productStatus": "APPROVED",
+                "isDefault": true,
+                "product_variation_status_id": 2
             },
-            "SizeChart": null
+            {
+                "id": 64,
+                "price": 250,
+                "quantity": 6,
+                "inStock": true,
+                "ProductVarientImages": [
+                    {
+                        "id": 117,
+                        "image_path": "https://firebasestorage.googleapis.com/v0/b/slash-f711b.appspot.com/o/images%2Fproduct-variants%2F1702840993655image_picker_9C6A2C1E-816C-4902-B1E6-1815DB51C3D9-7089-000008AC36BB6496.jpg?alt=media&token=991bd510-1f44-4cd5-b877-dbcfb1e97480",
+                        "product_varient_id": null,
+                        "createdAt": "2023-12-17T19:23:16.756Z",
+                        "updatedAt": "2023-12-17T19:23:16.756Z"
+                    },
+                    {
+                        "id": 118,
+                        "image_path": "https://firebasestorage.googleapis.com/v0/b/slash-f711b.appspot.com/o/images%2Fproduct-variants%2F1702840993664image_picker_68AB9F19-F57C-46F4-9192-09DFE3001741-7089-000008AC3BDB9997.jpg?alt=media&token=3739deba-4f78-4daf-a583-782f7980e0c1",
+                        "product_varient_id": null,
+                        "createdAt": "2023-12-17T19:23:16.756Z",
+                        "updatedAt": "2023-12-17T19:23:16.756Z"
+                    },
+                    {
+                        "id": 119,
+                        "image_path": "https://firebasestorage.googleapis.com/v0/b/slash-f711b.appspot.com/o/images%2Fproduct-variants%2F1702840993664image_picker_83FBC78C-168E-430B-9476-A6BE84D8647E-7089-000008AC40573E95.jpg?alt=media&token=7c58043d-54b8-4f0b-bb1b-4941fb4c7768",
+                        "product_varient_id": null,
+                        "createdAt": "2023-12-17T19:23:16.756Z",
+                        "updatedAt": "2023-12-17T19:23:16.756Z"
+                    }
+                ],
+                "productPropertiesValues": [
+                    {
+                        "value": "#00000",
+                        "property": "Color"
+                    }
+                ],
+                "productStatus": "APPROVED",
+                "isDefault": false,
+                "product_variation_status_id": 2
+            },
+            {
+                "id": 65,
+                "price": 300,
+                "quantity": 7,
+                "inStock": true,
+                "ProductVarientImages": [
+                    {
+                        "id": 120,
+                        "image_path": "https://firebasestorage.googleapis.com/v0/b/slash-f711b.appspot.com/o/images%2Fproduct-variants%2F1702841055078image_picker_3BEE8938-F42B-454A-AA5E-4456C0E9CEB1-7089-000008AC7C587080.jpg?alt=media&token=98556329-13c8-42ef-8ed0-28673e93b8e1",
+                        "product_varient_id": null,
+                        "createdAt": "2023-12-17T19:24:17.058Z",
+                        "updatedAt": "2023-12-17T19:24:17.058Z"
+                    },
+                    {
+                        "id": 121,
+                        "image_path": "https://firebasestorage.googleapis.com/v0/b/slash-f711b.appspot.com/o/images%2Fproduct-variants%2F1702841055078image_picker_488BE79C-5C1C-4CC7-8DEB-6C0591BA370E-7089-000008AC849958B6.jpg?alt=media&token=a7f1589e-a4b5-4775-8a82-5269878d8b06",
+                        "product_varient_id": null,
+                        "createdAt": "2023-12-17T19:24:17.058Z",
+                        "updatedAt": "2023-12-17T19:24:17.058Z"
+                    }
+                ],
+                "productPropertiesValues": [
+                    {
+                        "value": "3A5C6E",
+                        "property": "Color"
+                    }
+                ],
+                "productStatus": "APPROVED",
+                "isDefault": false,
+                "product_variation_status_id": 2
+            }
+        ],
+        "avaiableProperties": [
+            {
+                "property": "Color",
+                "values": [
+                    {
+                        "value": "999FA0",
+                        "id": 63
+                    },
+                    {
+                        "value": "#00000",
+                        "id": 64
+                    },
+                    {
+                        "value": "3A5C6E",
+                        "id": 65
+                    }
+                ]
+            }
+        ],
+        "brandName": "Interns",
+        "brandImage": "https://firebasestorage.googleapis.com/v0/b/slash-f711b.appspot.com/o/images%2Fbrands%2F1702834720203image_picker_D2A78E9A-EC1F-438C-83C6-AD5011B25C73-7089-00000892F07CC209.png?alt=media&token=5e5c9cc5-e896-4dc9-bed8-56126195f112"
+    },
+    "message": "Find product successfully",
+    "statusCode": 200
+}
+{
+    "data": {
+        "id": 18,
+        "name": "Hoodi",
+        "description": "comfy training hoodi",
+        "brand_id": 4,
+        "bosta_size_id": 2,
+        "product_rating": 0,
+        "estimated_days_preparing": 1,
+        "SizeChart": null,
+        "subCategory": {
+            "id": 2,
+            "name": "Mobile Covers"
         },
-        {
-            "id": 18,
-            "name": "Hoodi",
-            "description": "comfy training hoodi",
-            "sub_category_id": 2,
-            "brand_id": 4,
-            "bosta_size_id": 2,
-            "createdAt": "2023-12-17T18:39:39.477Z",
-            "updatedAt": "2023-12-17T18:39:39.477Z",
-            "deletedAt": null,
-            "product_rating": 0,
-            "estimated_days_preparing": 1,
-            "Brands": {
-                "id": 4,
-                "brand_name": "Interns",
-                "brand_facebook_page_link": null,
-                "brand_instagram_page_link": null,
-                "brand_website_link": null,
-                "brand_mobile_number": "01001412578",
-                "brand_email_address": "test@gmail.com",
-                "tax_id_number": null,
-                "brand_description": "For testing purposes",
-                "brand_logo_image_path": "https://firebasestorage.googleapis.com/v0/b/slash-f711b.appspot.com/o/images%2Fbrands%2F1702834720203image_picker_D2A78E9A-EC1F-438C-83C6-AD5011B25C73-7089-00000892F07CC209.png?alt=media&token=5e5c9cc5-e896-4dc9-bed8-56126195f112",
-                "brand_status_id": 3,
-                "brand_store_address_id": null,
-                "brand_category_id": 1,
-                "deletedAt": null,
-                "createdAt": "2023-12-17T17:38:41.380Z",
-                "updatedAt": "2023-12-17T17:40:26.631Z",
-                "brand_seller_id": 1,
-                "brand_id": null,
-                "slash_contract_path": null,
-                "brand_rating": 0,
-                "days_limit_to_return": 1,
-                "planId": null
-            },
-            "ProductVariations": [
-                {
-                    "id": 56,
-                    "product_id": 18,
-                    "price": 750,
-                    "quantity": 10,
-                    "is_default": true,
-                    "deletedAt": null,
-                    "createdAt": "2023-12-17T18:39:44.589Z",
-                    "updatedAt": "2023-12-17T19:19:37.357Z",
-                    "product_variation_status_id": 2,
-                    "ProductStatusLookups": {
-                        "id": 2,
-                        "name": "APPROVED",
-                        "createdAt": "2023-09-12T18:47:56.767Z",
-                        "updatedAt": "2023-09-12T18:47:56.767Z"
+        "variations": [
+            {
+                "id": 56,
+                "price": 750,
+                "quantity": 10,
+                "inStock": true,
+                "ProductVarientImages": [
+                    {
+                        "id": 98,
+                        "image_path": "https://firebasestorage.googleapis.com/v0/b/slash-f711b.appspot.com/o/images%2Fproduct-variants%2F1702838382360image_picker_D9E944D0-64E3-4ADB-BC4B-73DAE72156F8-7089-000008A4933E0287.jpg?alt=media&token=979eff11-3285-4ca3-9561-7d982f8d9a3e",
+                        "product_varient_id": null,
+                        "createdAt": "2023-12-17T18:39:44.589Z",
+                        "updatedAt": "2023-12-17T18:39:44.589Z"
                     },
-                    "ProductVarientImages": [
-                        {
-                            "id": 98,
-                            "image_path": "https://firebasestorage.googleapis.com/v0/b/slash-f711b.appspot.com/o/images%2Fproduct-variants%2F1702838382360image_picker_D9E944D0-64E3-4ADB-BC4B-73DAE72156F8-7089-000008A4933E0287.jpg?alt=media&token=979eff11-3285-4ca3-9561-7d982f8d9a3e",
-                            "product_varient_id": null,
-                            "createdAt": "2023-12-17T18:39:44.589Z",
-                            "updatedAt": "2023-12-17T18:39:44.589Z"
-                        },
-                        {
-                            "id": 99,
-                            "image_path": "https://firebasestorage.googleapis.com/v0/b/slash-f711b.appspot.com/o/images%2Fproduct-variants%2F1702838382361image_picker_E20B455F-794C-4C03-9999-F25979850809-7089-000008A49D1F7633.jpg?alt=media&token=ac689c20-54c3-4dd6-a2f6-360c33372a40",
-                            "product_varient_id": null,
-                            "createdAt": "2023-12-17T18:39:44.589Z",
-                            "updatedAt": "2023-12-17T18:39:44.589Z"
-                        }
-                    ]
-                }
-            ],
-            "SubCategories": {
-                "id": 2,
-                "name": "Mobile Covers",
-                "deletedAt": null,
-                "createdAt": "2023-12-17T18:09:21.812Z",
-                "updatedAt": "2023-12-17T18:09:21.812Z",
-                "category_id": 1,
-                "image_path": "https://firebasestorage.googleapis.com/v0/b/slash-f711b.appspot.com/o/images%2Fcategories%2F1702836560790Slash-Logo.png?alt=media&token=67fc6b14-399d-4825-872b-34536cca90f6"
+                    {
+                        "id": 99,
+                        "image_path": "https://firebasestorage.googleapis.com/v0/b/slash-f711b.appspot.com/o/images%2Fproduct-variants%2F1702838382361image_picker_E20B455F-794C-4C03-9999-F25979850809-7089-000008A49D1F7633.jpg?alt=media&token=ac689c20-54c3-4dd6-a2f6-360c33372a40",
+                        "product_varient_id": null,
+                        "createdAt": "2023-12-17T18:39:44.589Z",
+                        "updatedAt": "2023-12-17T18:39:44.589Z"
+                    }
+                ],
+                "productPropertiesValues": [
+                    {
+                        "value": "M",
+                        "property": "Size"
+                    },
+                    {
+                        "value": "E0E0E8",
+                        "property": "Color"
+                    },
+                    {
+                        "value": "cotton",
+                        "property": "Materials"
+                    }
+                ],
+                "productStatus": "APPROVED",
+                "isDefault": true,
+                "product_variation_status_id": 2
             },
-            "SizeChart": null
+            {
+                "id": 62,
+                "price": 800,
+                "quantity": 7,
+                "inStock": true,
+                "ProductVarientImages": [
+                    {
+                        "id": 112,
+                        "image_path": "https://firebasestorage.googleapis.com/v0/b/slash-f711b.appspot.com/o/images%2Fproduct-variants%2F1702840752053image_picker_27137E6E-4A21-4F7F-80FE-21C987D57616-7089-000008AAC3821165.jpg?alt=media&token=ee387417-0072-4848-9df1-d6e6a3bdbdc1",
+                        "product_varient_id": null,
+                        "createdAt": "2023-12-17T19:19:13.549Z",
+                        "updatedAt": "2023-12-17T19:19:13.549Z"
+                    },
+                    {
+                        "id": 113,
+                        "image_path": "https://firebasestorage.googleapis.com/v0/b/slash-f711b.appspot.com/o/images%2Fproduct-variants%2F1702840752055image_picker_2D3B51CF-7747-4872-8BC0-9065B3BD2269-7089-000008AAC65B92A0.jpg?alt=media&token=e2dc2c72-a242-49c0-b563-d15882285334",
+                        "product_varient_id": null,
+                        "createdAt": "2023-12-17T19:19:13.549Z",
+                        "updatedAt": "2023-12-17T19:19:13.549Z"
+                    },
+                    {
+                        "id": 114,
+                        "image_path": "https://firebasestorage.googleapis.com/v0/b/slash-f711b.appspot.com/o/images%2Fproduct-variants%2F1702840752057image_picker_4C726B7B-88EB-4DA1-A51F-DD5CC08AB2ED-7089-000008AAC9EBE672.jpg?alt=media&token=81522dea-7953-4aca-8986-bca895fba0e2",
+                        "product_varient_id": null,
+                        "createdAt": "2023-12-17T19:19:13.549Z",
+                        "updatedAt": "2023-12-17T19:19:13.549Z"
+                    }
+                ],
+                "productPropertiesValues": [
+                    {
+                        "value": "S",
+                        "property": "Size"
+                    },
+                    {
+                        "value": "000000",
+                        "property": "Color"
+                    },
+                    {
+                        "value": "cotton",
+                        "property": "Materials"
+                    }
+                ],
+                "productStatus": "APPROVED",
+                "isDefault": false,
+                "product_variation_status_id": 2
+            },
+            {
+                "id": 58,
+                "price": 750,
+                "quantity": 5,
+                "inStock": true,
+                "ProductVarientImages": [
+                    {
+                        "id": 102,
+                        "image_path": "https://firebasestorage.googleapis.com/v0/b/slash-f711b.appspot.com/o/images%2Fproduct-variants%2F1702840537447image_picker_CD2B9F76-CF8A-40F1-92A1-7557F8B10F2F-7089-000008A97E4BA025.jpg?alt=media&token=e60a9f82-e37d-4fd6-b39d-7fa09d07a97d",
+                        "product_varient_id": null,
+                        "createdAt": "2023-12-17T19:15:38.864Z",
+                        "updatedAt": "2023-12-17T19:15:38.864Z"
+                    },
+                    {
+                        "id": 103,
+                        "image_path": "https://firebasestorage.googleapis.com/v0/b/slash-f711b.appspot.com/o/images%2Fproduct-variants%2F1702840537465image_picker_1877BDBB-888F-4735-A004-ED2D56EEAEE6-7089-000008A9816F9A59.jpg?alt=media&token=4ea368ff-d674-4913-8f7a-5db10ba3bd4f",
+                        "product_varient_id": null,
+                        "createdAt": "2023-12-17T19:15:38.864Z",
+                        "updatedAt": "2023-12-17T19:15:38.864Z"
+                    }
+                ],
+                "productPropertiesValues": [
+                    {
+                        "value": "L",
+                        "property": "Size"
+                    },
+                    {
+                        "value": "E0E0E8",
+                        "property": "Color"
+                    },
+                    {
+                        "value": "cotton",
+                        "property": "Materials"
+                    }
+                ],
+                "productStatus": "APPROVED",
+                "isDefault": false,
+                "product_variation_status_id": 2
+            },
+            {
+                "id": 59,
+                "price": 750,
+                "quantity": 1,
+                "inStock": true,
+                "ProductVarientImages": [
+                    {
+                        "id": 104,
+                        "image_path": "https://firebasestorage.googleapis.com/v0/b/slash-f711b.appspot.com/o/images%2Fproduct-variants%2F1702840581053image_picker_1AE916AD-0012-4E83-836C-E9FA0EDEB85B-7089-000008A9E2F6374C.jpg?alt=media&token=3c7898f3-3e16-4ddf-bc2d-713fbe29fbd2",
+                        "product_varient_id": null,
+                        "createdAt": "2023-12-17T19:16:23.152Z",
+                        "updatedAt": "2023-12-17T19:16:23.152Z"
+                    },
+                    {
+                        "id": 105,
+                        "image_path": "https://firebasestorage.googleapis.com/v0/b/slash-f711b.appspot.com/o/images%2Fproduct-variants%2F1702840581054image_picker_0454402D-F717-4BD9-AC44-C431A8287BDA-7089-000008A9E522EBB0.jpg?alt=media&token=d1069421-9582-4625-a4e0-30b2445e543a",
+                        "product_varient_id": null,
+                        "createdAt": "2023-12-17T19:16:23.152Z",
+                        "updatedAt": "2023-12-17T19:16:23.152Z"
+                    }
+                ],
+                "productPropertiesValues": [
+                    {
+                        "value": "XL",
+                        "property": "Size"
+                    },
+                    {
+                        "value": "E0E0E8",
+                        "property": "Color"
+                    },
+                    {
+                        "value": "cotton",
+                        "property": "Materials"
+                    }
+                ],
+                "productStatus": "APPROVED",
+                "isDefault": false,
+                "product_variation_status_id": 2
+            },
+            {
+                "id": 60,
+                "price": 700,
+                "quantity": 2,
+                "inStock": true,
+                "ProductVarientImages": [
+                    {
+                        "id": 106,
+                        "image_path": "https://firebasestorage.googleapis.com/v0/b/slash-f711b.appspot.com/o/images%2Fproduct-variants%2F1702840666672image_picker_81E07382-1F38-4CE7-A640-08E9AB45D72F-7089-000008AA28AEEF33.jpg?alt=media&token=726f5782-3858-4a78-894a-c4bf511244c1",
+                        "product_varient_id": null,
+                        "createdAt": "2023-12-17T19:17:48.668Z",
+                        "updatedAt": "2023-12-17T19:17:48.668Z"
+                    },
+                    {
+                        "id": 107,
+                        "image_path": "https://firebasestorage.googleapis.com/v0/b/slash-f711b.appspot.com/o/images%2Fproduct-variants%2F1702840666675image_picker_5F62AAC3-3473-462E-A488-551DA664FE9C-7089-000008AA2E9D94EF.jpg?alt=media&token=333bcf43-0628-43ea-8c6f-079c95bf4b9f",
+                        "product_varient_id": null,
+                        "createdAt": "2023-12-17T19:17:48.668Z",
+                        "updatedAt": "2023-12-17T19:17:48.668Z"
+                    },
+                    {
+                        "id": 108,
+                        "image_path": "https://firebasestorage.googleapis.com/v0/b/slash-f711b.appspot.com/o/images%2Fproduct-variants%2F1702840666676image_picker_38172C88-929C-45E3-B4FA-907C95C6B679-7089-000008AA345E41F8.jpg?alt=media&token=2cec2e19-ba3f-4a3b-ac28-f63ecd74f666",
+                        "product_varient_id": null,
+                        "createdAt": "2023-12-17T19:17:48.668Z",
+                        "updatedAt": "2023-12-17T19:17:48.668Z"
+                    }
+                ],
+                "productPropertiesValues": [
+                    {
+                        "value": "m",
+                        "property": "Size"
+                    },
+                    {
+                        "value": "568EE1",
+                        "property": "Color"
+                    },
+                    {
+                        "value": "cotton",
+                        "property": "Materials"
+                    }
+                ],
+                "productStatus": "APPROVED",
+                "isDefault": false,
+                "product_variation_status_id": 2
+            },
+            {
+                "id": 61,
+                "price": 700,
+                "quantity": 3,
+                "inStock": true,
+                "ProductVarientImages": [
+                    {
+                        "id": 109,
+                        "image_path": "https://firebasestorage.googleapis.com/v0/b/slash-f711b.appspot.com/o/images%2Fproduct-variants%2F1702840705658image_picker_B4984AFC-CCA6-4077-85C4-96918CF22F59-7089-000008AA926B16AF.jpg?alt=media&token=80fce31b-a670-4ebc-abe6-e14b7745644f",
+                        "product_varient_id": null,
+                        "createdAt": "2023-12-17T19:18:27.699Z",
+                        "updatedAt": "2023-12-17T19:18:27.699Z"
+                    },
+                    {
+                        "id": 110,
+                        "image_path": "https://firebasestorage.googleapis.com/v0/b/slash-f711b.appspot.com/o/images%2Fproduct-variants%2F1702840705658image_picker_F1B6EAEB-38FB-4F02-B183-42002AB96DCE-7089-000008AA95E46F77.jpg?alt=media&token=261ac3b8-4226-45d9-9676-e186615a7cb8",
+                        "product_varient_id": null,
+                        "createdAt": "2023-12-17T19:18:27.699Z",
+                        "updatedAt": "2023-12-17T19:18:27.699Z"
+                    },
+                    {
+                        "id": 111,
+                        "image_path": "https://firebasestorage.googleapis.com/v0/b/slash-f711b.appspot.com/o/images%2Fproduct-variants%2F1702840705659image_picker_36235B06-AF41-46FB-9179-89DC3645AD9E-7089-000008AA9A5B9953.jpg?alt=media&token=7e60ce55-2aef-4cd3-b99e-188ba368abff",
+                        "product_varient_id": null,
+                        "createdAt": "2023-12-17T19:18:27.699Z",
+                        "updatedAt": "2023-12-17T19:18:27.699Z"
+                    }
+                ],
+                "productPropertiesValues": [
+                    {
+                        "value": "L",
+                        "property": "Size"
+                    },
+                    {
+                        "value": "568EE1",
+                        "property": "Color"
+                    },
+                    {
+                        "value": "cotton",
+                        "property": "Materials"
+                    }
+                ],
+                "productStatus": "APPROVED",
+                "isDefault": false,
+                "product_variation_status_id": 2
+            }
+        ],
+        "avaiableProperties": [
+            {
+                "property": "Size",
+                "values": [
+                    {
+                        "value": "M",
+                        "id": 56
+                    },
+                    {
+                        "value": "S",
+                        "id": 62
+                    },
+                    {
+                        "value": "L",
+                        "id": 58
+                    },
+                    {
+                        "value": "XL",
+                        "id": 59
+                    },
+                    {
+                        "value": "m",
+                        "id": 60
+                    },
+                    {
+                        "value": "L",
+                        "id": 61
+                    }
+                ]
+            },
+            {
+                "property": "Color",
+                "values": [
+                    {
+                        "value": "E0E0E8",
+                        "id": 56
+                    },
+                    {
+                        "value": "000000",
+                        "id": 62
+                    },
+                    {
+                        "value": "E0E0E8",
+                        "id": 58
+                    },
+                    {
+                        "value": "E0E0E8",
+                        "id": 59
+                    },
+                    {
+                        "value": "568EE1",
+                        "id": 60
+                    },
+                    {
+                        "value": "568EE1",
+                        "id": 61
+                    }
+                ]
+            },
+            {
+                "property": "Materials",
+                "values": [
+                    {
+                        "value": "cotton",
+                        "id": 56
+                    },
+                    {
+                        "value": "cotton",
+                        "id": 62
+                    },
+                    {
+                        "value": "cotton",
+                        "id": 58
+                    },
+                    {
+                        "value": "cotton",
+                        "id": 59
+                    },
+                    {
+                        "value": "cotton",
+                        "id": 60
+                    },
+                    {
+                        "value": "cotton",
+                        "id": 61
+                    }
+                ]
+            }
+        ],
+        "brandName": "Interns",
+        "brandImage": "https://firebasestorage.googleapis.com/v0/b/slash-f711b.appspot.com/o/images%2Fbrands%2F1702834720203image_picker_D2A78E9A-EC1F-438C-83C6-AD5011B25C73-7089-00000892F07CC209.png?alt=media&token=5e5c9cc5-e896-4dc9-bed8-56126195f112"
+    },
+    "message": "Find product successfully",
+    "statusCode": 200
+}{
+    "data": {
+        "id": 16,
+        "name": "Scarf",
+        "description": "this is the fourth product",
+        "brand_id": 4,
+        "bosta_size_id": 1,
+        "product_rating": 0,
+        "estimated_days_preparing": 1,
+        "SizeChart": null,
+        "subCategory": {
+            "id": 2,
+            "name": "Mobile Covers"
         },
-        {
-            "id": 16,
-            "name": "Scarf",
-            "description": "this is the fourth product",
-            "sub_category_id": 2,
-            "brand_id": 4,
-            "bosta_size_id": 1,
-            "createdAt": "2023-12-17T17:43:36.144Z",
-            "updatedAt": "2023-12-17T19:59:07.973Z",
-            "deletedAt": null,
-            "product_rating": 0,
-            "estimated_days_preparing": 1,
-            "Brands": {
-                "id": 4,
-                "brand_name": "Interns",
-                "brand_facebook_page_link": null,
-                "brand_instagram_page_link": null,
-                "brand_website_link": null,
-                "brand_mobile_number": "01001412578",
-                "brand_email_address": "test@gmail.com",
-                "tax_id_number": null,
-                "brand_description": "For testing purposes",
-                "brand_logo_image_path": "https://firebasestorage.googleapis.com/v0/b/slash-f711b.appspot.com/o/images%2Fbrands%2F1702834720203image_picker_D2A78E9A-EC1F-438C-83C6-AD5011B25C73-7089-00000892F07CC209.png?alt=media&token=5e5c9cc5-e896-4dc9-bed8-56126195f112",
-                "brand_status_id": 3,
-                "brand_store_address_id": null,
-                "brand_category_id": 1,
-                "deletedAt": null,
-                "createdAt": "2023-12-17T17:38:41.380Z",
-                "updatedAt": "2023-12-17T17:40:26.631Z",
-                "brand_seller_id": 1,
-                "brand_id": null,
-                "slash_contract_path": null,
-                "brand_rating": 0,
-                "days_limit_to_return": 1,
-                "planId": null
-            },
-            "ProductVariations": [
-                {
-                    "id": 51,
-                    "product_id": 16,
-                    "price": 500,
-                    "quantity": 10,
-                    "is_default": true,
-                    "deletedAt": null,
-                    "createdAt": "2023-12-17T17:43:44.684Z",
-                    "updatedAt": "2023-12-17T18:51:58.948Z",
-                    "product_variation_status_id": 2,
-                    "ProductStatusLookups": {
-                        "id": 2,
-                        "name": "APPROVED",
-                        "createdAt": "2023-09-12T18:47:56.767Z",
-                        "updatedAt": "2023-09-12T18:47:56.767Z"
+        "variations": [
+            {
+                "id": 51,
+                "price": 500,
+                "quantity": 10,
+                "inStock": true,
+                "ProductVarientImages": [
+                    {
+                        "id": 82,
+                        "image_path": "https://firebasestorage.googleapis.com/v0/b/slash-f711b.appspot.com/o/images%2Fproduct-variants%2F1702835022935image_picker_EDD4DC15-AED4-4ABE-891E-DCFE09F06996-7089-00000894AA611EA0.jpg?alt=media&token=9d779c81-1616-4a0c-8306-6de323dc8d40",
+                        "product_varient_id": null,
+                        "createdAt": "2023-12-17T17:43:44.684Z",
+                        "updatedAt": "2023-12-17T17:43:44.684Z"
                     },
-                    "ProductVarientImages": [
-                        {
-                            "id": 82,
-                            "image_path": "https://firebasestorage.googleapis.com/v0/b/slash-f711b.appspot.com/o/images%2Fproduct-variants%2F1702835022935image_picker_EDD4DC15-AED4-4ABE-891E-DCFE09F06996-7089-00000894AA611EA0.jpg?alt=media&token=9d779c81-1616-4a0c-8306-6de323dc8d40",
-                            "product_varient_id": null,
-                            "createdAt": "2023-12-17T17:43:44.684Z",
-                            "updatedAt": "2023-12-17T17:43:44.684Z"
-                        },
-                        {
-                            "id": 83,
-                            "image_path": "https://firebasestorage.googleapis.com/v0/b/slash-f711b.appspot.com/o/images%2Fproduct-variants%2F1702835022954image_picker_BA9E5543-A42A-423E-B4F6-F89DAAD16529-7089-00000894A02CF0B4.jpg?alt=media&token=73a776e5-9f04-4ea8-bc90-094c6956beb3",
-                            "product_varient_id": null,
-                            "createdAt": "2023-12-17T17:43:44.684Z",
-                            "updatedAt": "2023-12-17T17:43:44.684Z"
-                        },
-                        {
-                            "id": 84,
-                            "image_path": "https://firebasestorage.googleapis.com/v0/b/slash-f711b.appspot.com/o/images%2Fproduct-variants%2F1702835022954image_picker_7A1C21CC-D9CF-40C3-916C-BDDFA36BE3A5-7089-00000894ADCB9A86.jpg?alt=media&token=6a0d6946-6c0d-419d-bc02-3116c039c72d",
-                            "product_varient_id": null,
-                            "createdAt": "2023-12-17T17:43:44.684Z",
-                            "updatedAt": "2023-12-17T17:43:44.684Z"
-                        }
-                    ]
-                }
-            ],
-            "SubCategories": {
-                "id": 2,
-                "name": "Mobile Covers",
-                "deletedAt": null,
-                "createdAt": "2023-12-17T18:09:21.812Z",
-                "updatedAt": "2023-12-17T18:09:21.812Z",
-                "category_id": 1,
-                "image_path": "https://firebasestorage.googleapis.com/v0/b/slash-f711b.appspot.com/o/images%2Fcategories%2F1702836560790Slash-Logo.png?alt=media&token=67fc6b14-399d-4825-872b-34536cca90f6"
+                    {
+                        "id": 83,
+                        "image_path": "https://firebasestorage.googleapis.com/v0/b/slash-f711b.appspot.com/o/images%2Fproduct-variants%2F1702835022954image_picker_BA9E5543-A42A-423E-B4F6-F89DAAD16529-7089-00000894A02CF0B4.jpg?alt=media&token=73a776e5-9f04-4ea8-bc90-094c6956beb3",
+                        "product_varient_id": null,
+                        "createdAt": "2023-12-17T17:43:44.684Z",
+                        "updatedAt": "2023-12-17T17:43:44.684Z"
+                    },
+                    {
+                        "id": 84,
+                        "image_path": "https://firebasestorage.googleapis.com/v0/b/slash-f711b.appspot.com/o/images%2Fproduct-variants%2F1702835022954image_picker_7A1C21CC-D9CF-40C3-916C-BDDFA36BE3A5-7089-00000894ADCB9A86.jpg?alt=media&token=6a0d6946-6c0d-419d-bc02-3116c039c72d",
+                        "product_varient_id": null,
+                        "createdAt": "2023-12-17T17:43:44.684Z",
+                        "updatedAt": "2023-12-17T17:43:44.684Z"
+                    }
+                ],
+                "productPropertiesValues": [
+                    {
+                        "value": "M",
+                        "property": "Size"
+                    },
+                    {
+                        "value": "cotton",
+                        "property": "Materials"
+                    }
+                ],
+                "productStatus": "APPROVED",
+                "isDefault": true,
+                "product_variation_status_id": 2
             },
-            "SizeChart": null
-        }
-    ]
+            {
+                "id": 53,
+                "price": 600,
+                "quantity": 5,
+                "inStock": true,
+                "ProductVarientImages": [
+                    {
+                        "id": 88,
+                        "image_path": "https://firebasestorage.googleapis.com/v0/b/slash-f711b.appspot.com/o/images%2Fproduct-variants%2F1702835122007image_picker_A97C3B01-90F2-49D7-B3CB-A6E34C4FC2EE-7089-0000089537ACE28C.jpg?alt=media&token=56b75a49-7d92-4477-8a22-59c78e664dbb",
+                        "product_varient_id": null,
+                        "createdAt": "2023-12-17T17:45:23.724Z",
+                        "updatedAt": "2023-12-17T17:45:23.724Z"
+                    },
+                    {
+                        "id": 89,
+                        "image_path": "https://firebasestorage.googleapis.com/v0/b/slash-f711b.appspot.com/o/images%2Fproduct-variants%2F1702835122008image_picker_1FD1223B-A7B5-46EA-800F-96658728E197-7089-000008954686434E.jpg?alt=media&token=0a4969dc-0677-4273-959b-e4628a388348",
+                        "product_varient_id": null,
+                        "createdAt": "2023-12-17T17:45:23.724Z",
+                        "updatedAt": "2023-12-17T17:45:23.724Z"
+                    },
+                    {
+                        "id": 90,
+                        "image_path": "https://firebasestorage.googleapis.com/v0/b/slash-f711b.appspot.com/o/images%2Fproduct-variants%2F1702835122008image_picker_6220ECA6-33BC-4795-8750-D2EC3C8CE4BB-7089-00000895591BCDED.jpg?alt=media&token=e1e86902-12ab-40c0-b208-4f8bc991974a",
+                        "product_varient_id": null,
+                        "createdAt": "2023-12-17T17:45:23.724Z",
+                        "updatedAt": "2023-12-17T17:45:23.724Z"
+                    }
+                ],
+                "productPropertiesValues": [
+                    {
+                        "value": "L",
+                        "property": "Size"
+                    },
+                    {
+                        "value": "cotton",
+                        "property": "Materials"
+                    }
+                ],
+                "productStatus": "APPROVED",
+                "isDefault": false,
+                "product_variation_status_id": 2
+            },
+            {
+                "id": 55,
+                "price": 800,
+                "quantity": 1,
+                "inStock": true,
+                "ProductVarientImages": [
+                    {
+                        "id": 95,
+                        "image_path": "https://firebasestorage.googleapis.com/v0/b/slash-f711b.appspot.com/o/images%2Fproduct-variants%2F1702837407485image_picker_57296783-AAD2-401A-B9D3-35259BCAF24B-7089-000008A1C08CF869.jpg?alt=media&token=ac216b32-e5d4-455d-b61b-08a5a947dea4",
+                        "product_varient_id": null,
+                        "createdAt": "2023-12-17T18:23:29.259Z",
+                        "updatedAt": "2023-12-17T18:23:29.259Z"
+                    },
+                    {
+                        "id": 96,
+                        "image_path": "https://firebasestorage.googleapis.com/v0/b/slash-f711b.appspot.com/o/images%2Fproduct-variants%2F1702837407494image_picker_7F456CAD-A44C-4C6F-B9AB-C4BE11DCAFB9-7089-000008A1C66A0DE9.jpg?alt=media&token=71adf3c7-8173-4305-a350-dcd4c0f688ac",
+                        "product_varient_id": null,
+                        "createdAt": "2023-12-17T18:23:29.259Z",
+                        "updatedAt": "2023-12-17T18:23:29.259Z"
+                    },
+                    {
+                        "id": 97,
+                        "image_path": "https://firebasestorage.googleapis.com/v0/b/slash-f711b.appspot.com/o/images%2Fproduct-variants%2F1702837407494image_picker_E0A75CE2-8B52-4DFB-9F8C-7A254756BDA8-7089-000008A1CCBF3841.jpg?alt=media&token=5a167984-828e-4596-8547-dc42240f2336",
+                        "product_varient_id": null,
+                        "createdAt": "2023-12-17T18:23:29.259Z",
+                        "updatedAt": "2023-12-17T18:23:29.259Z"
+                    }
+                ],
+                "productPropertiesValues": [
+                    {
+                        "value": "XL",
+                        "property": "Size"
+                    },
+                    {
+                        "value": "cotton",
+                        "property": "Materials"
+                    }
+                ],
+                "productStatus": "APPROVED",
+                "isDefault": false,
+                "product_variation_status_id": 2
+            }
+        ],
+        "avaiableProperties": [
+            {
+                "property": "Size",
+                "values": [
+                    {
+                        "value": "M",
+                        "id": 51
+                    },
+                    {
+                        "value": "L",
+                        "id": 53
+                    },
+                    {
+                        "value": "XL",
+                        "id": 55
+                    }
+                ]
+            },
+            {
+                "property": "Materials",
+                "values": [
+                    {
+                        "value": "cotton",
+                        "id": 51
+                    },
+                    {
+                        "value": "cotton",
+                        "id": 53
+                    },
+                    {
+                        "value": "cotton",
+                        "id": 55
+                    }
+                ]
+            }
+        ],
+        "brandName": "Interns",
+        "brandImage": "https://firebasestorage.googleapis.com/v0/b/slash-f711b.appspot.com/o/images%2Fbrands%2F1702834720203image_picker_D2A78E9A-EC1F-438C-83C6-AD5011B25C73-7089-00000892F07CC209.png?alt=media&token=5e5c9cc5-e896-4dc9-bed8-56126195f112"
+    },
+    "message": "Find product successfully",
+    "statusCode": 200
 }

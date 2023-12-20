@@ -9,7 +9,7 @@ class Product {
   final String? brandName;
   final String? brandLogoUrl;
   final double rating;
-  final List<ProductVariation> variations;
+  List<ProductVariation> variations;
   final List<ProductPropertyAndValue> availableProperties;
 
   Product(
