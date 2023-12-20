@@ -43,13 +43,13 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
 
   Widget displayVariations() {
     Widget? size, color, material;
-    if (widget.product.availableProperties
+    if (variation!.productPropertiesValues
         .any((property) => property.property == 'Size')) {
       List<String> values = [];
-      widget.product.availableProperties
+      variation!.productPropertiesValues
           .where((element) => element.property == 'Size')
           .forEach((property) {
-        values = property.values;
+        values.add(property.value);
       });
       size = SizeWidget(values: values, changeVariation: _changeVariation);
     }
@@ -66,13 +66,13 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
         changeVariation: _changeVariation,
       );
     }
-    if (widget.product.availableProperties
+    if (variation!.productPropertiesValues
         .any((property) => property.property == 'Materials')) {
       List<String> values = [];
-      widget.product.availableProperties
+      variation!.productPropertiesValues
           .where((element) => element.property == 'Materials')
           .forEach((property) {
-        values = property.values;
+        values.add(property.value);
       });
       material = MaterialWidget(
         materials: values,
@@ -170,10 +170,6 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
               ),
               Text(widget.product.brandName!),
             ],
-          ),
-          ElevatedButton(
-            onPressed: fetchProductVariations,
-            child: const Text('data'),
           ),
           displayVariations(),
         ],
