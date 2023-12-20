@@ -1,3 +1,4 @@
+import 'package:slash/datastructures/ProductVariantImage.dart';
 import 'package:slash/datastructures/PropertyValues.dart';
 
 class ProductVariation {
@@ -6,7 +7,7 @@ class ProductVariation {
   final num price;
   final int quantity;
   final bool inStock; //to enable/disable addToCart button
-  final List<String> productVarientImages;
+  final List<ProductVariantImage> productVarientImages;
   final List<ProductPropertyAndValue> productPropertiesValues;
 
   ProductVariation(
@@ -18,16 +19,21 @@ class ProductVariation {
       required this.productVarientImages,
       required this.productPropertiesValues});
   factory ProductVariation.fromJson(Map<String, dynamic> json) {
+    List<dynamic>? images = json['ProductVarientImages'];
+    List<ProductVariantImage> productImages = [];
+
+    if (images != null && images is List) {
+      productImages =
+          images.map((image) => ProductVariantImage.fromJson(image)).toList();
+    }
+
     return ProductVariation(
       id: json['id'] ?? 0,
-      productId: json['productId'] ?? 0,
+      productId: json['product_id'] ?? 0,
       price: (json['price'] ?? 0.0).toDouble(),
       quantity: json['quantity'] ?? 0,
-      inStock: json['inStock'] ?? false,
-      productVarientImages: (json['productVarientImages'] as List<dynamic>?)
-              ?.map((image) => image.toString())
-              .toList() ??
-          [],
+      inStock: json['quantity'] < 1 ? false : true,
+      productVarientImages: productImages,
       productPropertiesValues: (json['productPropertiesValues']
                   as List<dynamic>?)
               ?.map((property) => ProductPropertyAndValue.fromJson(property))

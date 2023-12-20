@@ -1,0 +1,426 @@
+{
+    "statusCode": 200,
+    "message": "Find all products successfully",
+    "pagination": {
+        "pages": null
+    },
+    "data": [
+        {
+            "id": 22,
+            "name": "Wall painting",
+            "description": "Warm and calming wall painting",
+            "sub_category_id": 2,
+            "brand_id": 4,
+            "bosta_size_id": 1,
+            "createdAt": "2023-12-17T19:42:26.607Z",
+            "updatedAt": "2023-12-17T19:42:26.607Z",
+            "deletedAt": null,
+            "product_rating": 0,
+            "estimated_days_preparing": 5,
+            "Brands": {
+                "id": 4,
+                "brand_name": "Interns",
+                "brand_facebook_page_link": null,
+                "brand_instagram_page_link": null,
+                "brand_website_link": null,
+                "brand_mobile_number": "01001412578",
+                "brand_email_address": "test@gmail.com",
+                "tax_id_number": null,
+                "brand_description": "For testing purposes",
+                "brand_logo_image_path": "https://firebasestorage.googleapis.com/v0/b/slash-f711b.appspot.com/o/images%2Fbrands%2F1702834720203image_picker_D2A78E9A-EC1F-438C-83C6-AD5011B25C73-7089-00000892F07CC209.png?alt=media&token=5e5c9cc5-e896-4dc9-bed8-56126195f112",
+                "brand_status_id": 3,
+                "brand_store_address_id": null,
+                "brand_category_id": 1,
+                "deletedAt": null,
+                "createdAt": "2023-12-17T17:38:41.380Z",
+                "updatedAt": "2023-12-17T17:40:26.631Z",
+                "brand_seller_id": 1,
+                "brand_id": null,
+                "slash_contract_path": null,
+                "brand_rating": 0,
+                "days_limit_to_return": 1,
+                "planId": null
+            },
+            "ProductVariations": [
+                {
+                    "id": 68,
+                    "product_id": 22,
+                    "price": 1010,
+                    "quantity": 1,
+                    "is_default": true,
+                    "deletedAt": null,
+                    "createdAt": "2023-12-17T19:42:33.844Z",
+                    "updatedAt": "2023-12-17T19:57:49.076Z",
+                    "product_variation_status_id": 2,
+                    "ProductStatusLookups": {
+                        "id": 2,
+                        "name": "APPROVED",
+                        "createdAt": "2023-09-12T18:47:56.767Z",
+                        "updatedAt": "2023-09-12T18:47:56.767Z"
+                    },
+                    "ProductVarientImages": [
+                        {
+                            "id": 127,
+                            "image_path": "https://firebasestorage.googleapis.com/v0/b/slash-f711b.appspot.com/o/images%2Fproduct-variants%2F1702842151610image_picker_2D257B4C-6500-4BB9-ADAD-BA7594B78586-7089-000008B2B1A54B9E.jpg?alt=media&token=4cad311e-9cbe-4191-95aa-e61b651bcbdc",
+                            "product_varient_id": null,
+                            "createdAt": "2023-12-17T19:42:33.844Z",
+                            "updatedAt": "2023-12-17T19:42:33.844Z"
+                        },
+                        {
+                            "id": 128,
+                            "image_path": "https://firebasestorage.googleapis.com/v0/b/slash-f711b.appspot.com/o/images%2Fproduct-variants%2F1702842151623image_picker_55240B63-8841-4763-BDDE-97BF9FE7E414-7089-000008B2B423465A.jpg?alt=media&token=5ba71fbc-fbad-4550-b2cc-b050f8701dff",
+                            "product_varient_id": null,
+                            "createdAt": "2023-12-17T19:42:33.844Z",
+                            "updatedAt": "2023-12-17T19:42:33.844Z"
+                        }
+                    ]
+                }
+            ],
+            "SubCategories": {
+                "id": 2,
+                "name": "Mobile Covers",
+                "deletedAt": null,
+                "createdAt": "2023-12-17T18:09:21.812Z",
+                "updatedAt": "2023-12-17T18:09:21.812Z",
+                "category_id": 1,
+                "image_path": "https://firebasestorage.googleapis.com/v0/b/slash-f711b.appspot.com/o/images%2Fcategories%2F1702836560790Slash-Logo.png?alt=media&token=67fc6b14-399d-4825-872b-34536cca90f6"
+            },
+            "SizeChart": null
+        },
+        {
+            "id": 21,
+            "name": "Scarf",
+            "description": "scarf",
+            "sub_category_id": 2,
+            "brand_id": 4,
+            "bosta_size_id": 2,
+            "createdAt": "2023-12-17T19:27:09.317Z",
+            "updatedAt": "2023-12-17T19:27:09.317Z",
+            "deletedAt": null,
+            "product_rating": 0,
+            "estimated_days_preparing": 1,
+            "Brands": {
+                "id": 4,
+                "brand_name": "Interns",
+                "brand_facebook_page_link": null,
+                "brand_instagram_page_link": null,
+                "brand_website_link": null,
+                "brand_mobile_number": "01001412578",
+                "brand_email_address": "test@gmail.com",
+                "tax_id_number": null,
+                "brand_description": "For testing purposes",
+                "brand_logo_image_path": "https://firebasestorage.googleapis.com/v0/b/slash-f711b.appspot.com/o/images%2Fbrands%2F1702834720203image_picker_D2A78E9A-EC1F-438C-83C6-AD5011B25C73-7089-00000892F07CC209.png?alt=media&token=5e5c9cc5-e896-4dc9-bed8-56126195f112",
+                "brand_status_id": 3,
+                "brand_store_address_id": null,
+                "brand_category_id": 1,
+                "deletedAt": null,
+                "createdAt": "2023-12-17T17:38:41.380Z",
+                "updatedAt": "2023-12-17T17:40:26.631Z",
+                "brand_seller_id": 1,
+                "brand_id": null,
+                "slash_contract_path": null,
+                "brand_rating": 0,
+                "days_limit_to_return": 1,
+                "planId": null
+            },
+            "ProductVariations": [
+                {
+                    "id": 66,
+                    "product_id": 21,
+                    "price": 600,
+                    "quantity": 10,
+                    "is_default": true,
+                    "deletedAt": null,
+                    "createdAt": "2023-12-17T19:27:15.431Z",
+                    "updatedAt": "2023-12-17T19:57:36.464Z",
+                    "product_variation_status_id": 2,
+                    "ProductStatusLookups": {
+                        "id": 2,
+                        "name": "APPROVED",
+                        "createdAt": "2023-09-12T18:47:56.767Z",
+                        "updatedAt": "2023-09-12T18:47:56.767Z"
+                    },
+                    "ProductVarientImages": [
+                        {
+                            "id": 122,
+                            "image_path": "https://firebasestorage.googleapis.com/v0/b/slash-f711b.appspot.com/o/images%2Fproduct-variants%2F1702841234152image_picker_A1AB03B4-EF4F-4EF3-A856-E91764672AE1-7089-000008AD6B84996C.jpg?alt=media&token=06ba48dc-a710-49a0-b625-7beae5665992",
+                            "product_varient_id": null,
+                            "createdAt": "2023-12-17T19:27:15.431Z",
+                            "updatedAt": "2023-12-17T19:27:15.431Z"
+                        },
+                        {
+                            "id": 123,
+                            "image_path": "https://firebasestorage.googleapis.com/v0/b/slash-f711b.appspot.com/o/images%2Fproduct-variants%2F1702841234156image_picker_F27F567B-7308-4C42-8F70-2647C9ED14D2-7089-000008AD71C9F9D0.jpg?alt=media&token=a63405ac-26c3-445e-8577-6693928c7ddb",
+                            "product_varient_id": null,
+                            "createdAt": "2023-12-17T19:27:15.431Z",
+                            "updatedAt": "2023-12-17T19:27:15.431Z"
+                        }
+                    ]
+                }
+            ],
+            "SubCategories": {
+                "id": 2,
+                "name": "Mobile Covers",
+                "deletedAt": null,
+                "createdAt": "2023-12-17T18:09:21.812Z",
+                "updatedAt": "2023-12-17T18:09:21.812Z",
+                "category_id": 1,
+                "image_path": "https://firebasestorage.googleapis.com/v0/b/slash-f711b.appspot.com/o/images%2Fcategories%2F1702836560790Slash-Logo.png?alt=media&token=67fc6b14-399d-4825-872b-34536cca90f6"
+            },
+            "SizeChart": null
+        },
+        {
+            "id": 20,
+            "name": "Hijab light",
+            "description": "Sports hijab light",
+            "sub_category_id": 2,
+            "brand_id": 4,
+            "bosta_size_id": 1,
+            "createdAt": "2023-12-17T19:22:22.888Z",
+            "updatedAt": "2023-12-17T19:22:22.888Z",
+            "deletedAt": null,
+            "product_rating": 0,
+            "estimated_days_preparing": 2,
+            "Brands": {
+                "id": 4,
+                "brand_name": "Interns",
+                "brand_facebook_page_link": null,
+                "brand_instagram_page_link": null,
+                "brand_website_link": null,
+                "brand_mobile_number": "01001412578",
+                "brand_email_address": "test@gmail.com",
+                "tax_id_number": null,
+                "brand_description": "For testing purposes",
+                "brand_logo_image_path": "https://firebasestorage.googleapis.com/v0/b/slash-f711b.appspot.com/o/images%2Fbrands%2F1702834720203image_picker_D2A78E9A-EC1F-438C-83C6-AD5011B25C73-7089-00000892F07CC209.png?alt=media&token=5e5c9cc5-e896-4dc9-bed8-56126195f112",
+                "brand_status_id": 3,
+                "brand_store_address_id": null,
+                "brand_category_id": 1,
+                "deletedAt": null,
+                "createdAt": "2023-12-17T17:38:41.380Z",
+                "updatedAt": "2023-12-17T17:40:26.631Z",
+                "brand_seller_id": 1,
+                "brand_id": null,
+                "slash_contract_path": null,
+                "brand_rating": 0,
+                "days_limit_to_return": 1,
+                "planId": null
+            },
+            "ProductVariations": [
+                {
+                    "id": 63,
+                    "product_id": 20,
+                    "price": 250,
+                    "quantity": 5,
+                    "is_default": true,
+                    "deletedAt": null,
+                    "createdAt": "2023-12-17T19:22:26.696Z",
+                    "updatedAt": "2023-12-17T19:57:16.514Z",
+                    "product_variation_status_id": 2,
+                    "ProductStatusLookups": {
+                        "id": 2,
+                        "name": "APPROVED",
+                        "createdAt": "2023-09-12T18:47:56.767Z",
+                        "updatedAt": "2023-09-12T18:47:56.767Z"
+                    },
+                    "ProductVarientImages": [
+                        {
+                            "id": 115,
+                            "image_path": "https://firebasestorage.googleapis.com/v0/b/slash-f711b.appspot.com/o/images%2Fproduct-variants%2F1702840944790image_picker_FC424AFC-9E3F-4862-803A-0E84111B7DE1-7089-000008ABDDE64772.jpg?alt=media&token=bde3ebf0-440f-4169-87ce-2fd87e9d17eb",
+                            "product_varient_id": null,
+                            "createdAt": "2023-12-17T19:22:26.696Z",
+                            "updatedAt": "2023-12-17T19:22:26.696Z"
+                        },
+                        {
+                            "id": 116,
+                            "image_path": "https://firebasestorage.googleapis.com/v0/b/slash-f711b.appspot.com/o/images%2Fproduct-variants%2F1702840944791image_picker_4662974B-EC91-451A-9C72-8746A9CFAA0E-7089-000008ABE0A3A25A.jpg?alt=media&token=bf45ef80-55bb-4ce7-87e3-55093f7ebcc7",
+                            "product_varient_id": null,
+                            "createdAt": "2023-12-17T19:22:26.696Z",
+                            "updatedAt": "2023-12-17T19:22:26.696Z"
+                        }
+                    ]
+                }
+            ],
+            "SubCategories": {
+                "id": 2,
+                "name": "Mobile Covers",
+                "deletedAt": null,
+                "createdAt": "2023-12-17T18:09:21.812Z",
+                "updatedAt": "2023-12-17T18:09:21.812Z",
+                "category_id": 1,
+                "image_path": "https://firebasestorage.googleapis.com/v0/b/slash-f711b.appspot.com/o/images%2Fcategories%2F1702836560790Slash-Logo.png?alt=media&token=67fc6b14-399d-4825-872b-34536cca90f6"
+            },
+            "SizeChart": null
+        },
+        {
+            "id": 18,
+            "name": "Hoodi",
+            "description": "comfy training hoodi",
+            "sub_category_id": 2,
+            "brand_id": 4,
+            "bosta_size_id": 2,
+            "createdAt": "2023-12-17T18:39:39.477Z",
+            "updatedAt": "2023-12-17T18:39:39.477Z",
+            "deletedAt": null,
+            "product_rating": 0,
+            "estimated_days_preparing": 1,
+            "Brands": {
+                "id": 4,
+                "brand_name": "Interns",
+                "brand_facebook_page_link": null,
+                "brand_instagram_page_link": null,
+                "brand_website_link": null,
+                "brand_mobile_number": "01001412578",
+                "brand_email_address": "test@gmail.com",
+                "tax_id_number": null,
+                "brand_description": "For testing purposes",
+                "brand_logo_image_path": "https://firebasestorage.googleapis.com/v0/b/slash-f711b.appspot.com/o/images%2Fbrands%2F1702834720203image_picker_D2A78E9A-EC1F-438C-83C6-AD5011B25C73-7089-00000892F07CC209.png?alt=media&token=5e5c9cc5-e896-4dc9-bed8-56126195f112",
+                "brand_status_id": 3,
+                "brand_store_address_id": null,
+                "brand_category_id": 1,
+                "deletedAt": null,
+                "createdAt": "2023-12-17T17:38:41.380Z",
+                "updatedAt": "2023-12-17T17:40:26.631Z",
+                "brand_seller_id": 1,
+                "brand_id": null,
+                "slash_contract_path": null,
+                "brand_rating": 0,
+                "days_limit_to_return": 1,
+                "planId": null
+            },
+            "ProductVariations": [
+                {
+                    "id": 56,
+                    "product_id": 18,
+                    "price": 750,
+                    "quantity": 10,
+                    "is_default": true,
+                    "deletedAt": null,
+                    "createdAt": "2023-12-17T18:39:44.589Z",
+                    "updatedAt": "2023-12-17T19:19:37.357Z",
+                    "product_variation_status_id": 2,
+                    "ProductStatusLookups": {
+                        "id": 2,
+                        "name": "APPROVED",
+                        "createdAt": "2023-09-12T18:47:56.767Z",
+                        "updatedAt": "2023-09-12T18:47:56.767Z"
+                    },
+                    "ProductVarientImages": [
+                        {
+                            "id": 98,
+                            "image_path": "https://firebasestorage.googleapis.com/v0/b/slash-f711b.appspot.com/o/images%2Fproduct-variants%2F1702838382360image_picker_D9E944D0-64E3-4ADB-BC4B-73DAE72156F8-7089-000008A4933E0287.jpg?alt=media&token=979eff11-3285-4ca3-9561-7d982f8d9a3e",
+                            "product_varient_id": null,
+                            "createdAt": "2023-12-17T18:39:44.589Z",
+                            "updatedAt": "2023-12-17T18:39:44.589Z"
+                        },
+                        {
+                            "id": 99,
+                            "image_path": "https://firebasestorage.googleapis.com/v0/b/slash-f711b.appspot.com/o/images%2Fproduct-variants%2F1702838382361image_picker_E20B455F-794C-4C03-9999-F25979850809-7089-000008A49D1F7633.jpg?alt=media&token=ac689c20-54c3-4dd6-a2f6-360c33372a40",
+                            "product_varient_id": null,
+                            "createdAt": "2023-12-17T18:39:44.589Z",
+                            "updatedAt": "2023-12-17T18:39:44.589Z"
+                        }
+                    ]
+                }
+            ],
+            "SubCategories": {
+                "id": 2,
+                "name": "Mobile Covers",
+                "deletedAt": null,
+                "createdAt": "2023-12-17T18:09:21.812Z",
+                "updatedAt": "2023-12-17T18:09:21.812Z",
+                "category_id": 1,
+                "image_path": "https://firebasestorage.googleapis.com/v0/b/slash-f711b.appspot.com/o/images%2Fcategories%2F1702836560790Slash-Logo.png?alt=media&token=67fc6b14-399d-4825-872b-34536cca90f6"
+            },
+            "SizeChart": null
+        },
+        {
+            "id": 16,
+            "name": "Scarf",
+            "description": "this is the fourth product",
+            "sub_category_id": 2,
+            "brand_id": 4,
+            "bosta_size_id": 1,
+            "createdAt": "2023-12-17T17:43:36.144Z",
+            "updatedAt": "2023-12-17T19:59:07.973Z",
+            "deletedAt": null,
+            "product_rating": 0,
+            "estimated_days_preparing": 1,
+            "Brands": {
+                "id": 4,
+                "brand_name": "Interns",
+                "brand_facebook_page_link": null,
+                "brand_instagram_page_link": null,
+                "brand_website_link": null,
+                "brand_mobile_number": "01001412578",
+                "brand_email_address": "test@gmail.com",
+                "tax_id_number": null,
+                "brand_description": "For testing purposes",
+                "brand_logo_image_path": "https://firebasestorage.googleapis.com/v0/b/slash-f711b.appspot.com/o/images%2Fbrands%2F1702834720203image_picker_D2A78E9A-EC1F-438C-83C6-AD5011B25C73-7089-00000892F07CC209.png?alt=media&token=5e5c9cc5-e896-4dc9-bed8-56126195f112",
+                "brand_status_id": 3,
+                "brand_store_address_id": null,
+                "brand_category_id": 1,
+                "deletedAt": null,
+                "createdAt": "2023-12-17T17:38:41.380Z",
+                "updatedAt": "2023-12-17T17:40:26.631Z",
+                "brand_seller_id": 1,
+                "brand_id": null,
+                "slash_contract_path": null,
+                "brand_rating": 0,
+                "days_limit_to_return": 1,
+                "planId": null
+            },
+            "ProductVariations": [
+                {
+                    "id": 51,
+                    "product_id": 16,
+                    "price": 500,
+                    "quantity": 10,
+                    "is_default": true,
+                    "deletedAt": null,
+                    "createdAt": "2023-12-17T17:43:44.684Z",
+                    "updatedAt": "2023-12-17T18:51:58.948Z",
+                    "product_variation_status_id": 2,
+                    "ProductStatusLookups": {
+                        "id": 2,
+                        "name": "APPROVED",
+                        "createdAt": "2023-09-12T18:47:56.767Z",
+                        "updatedAt": "2023-09-12T18:47:56.767Z"
+                    },
+                    "ProductVarientImages": [
+                        {
+                            "id": 82,
+                            "image_path": "https://firebasestorage.googleapis.com/v0/b/slash-f711b.appspot.com/o/images%2Fproduct-variants%2F1702835022935image_picker_EDD4DC15-AED4-4ABE-891E-DCFE09F06996-7089-00000894AA611EA0.jpg?alt=media&token=9d779c81-1616-4a0c-8306-6de323dc8d40",
+                            "product_varient_id": null,
+                            "createdAt": "2023-12-17T17:43:44.684Z",
+                            "updatedAt": "2023-12-17T17:43:44.684Z"
+                        },
+                        {
+                            "id": 83,
+                            "image_path": "https://firebasestorage.googleapis.com/v0/b/slash-f711b.appspot.com/o/images%2Fproduct-variants%2F1702835022954image_picker_BA9E5543-A42A-423E-B4F6-F89DAAD16529-7089-00000894A02CF0B4.jpg?alt=media&token=73a776e5-9f04-4ea8-bc90-094c6956beb3",
+                            "product_varient_id": null,
+                            "createdAt": "2023-12-17T17:43:44.684Z",
+                            "updatedAt": "2023-12-17T17:43:44.684Z"
+                        },
+                        {
+                            "id": 84,
+                            "image_path": "https://firebasestorage.googleapis.com/v0/b/slash-f711b.appspot.com/o/images%2Fproduct-variants%2F1702835022954image_picker_7A1C21CC-D9CF-40C3-916C-BDDFA36BE3A5-7089-00000894ADCB9A86.jpg?alt=media&token=6a0d6946-6c0d-419d-bc02-3116c039c72d",
+                            "product_varient_id": null,
+                            "createdAt": "2023-12-17T17:43:44.684Z",
+                            "updatedAt": "2023-12-17T17:43:44.684Z"
+                        }
+                    ]
+                }
+            ],
+            "SubCategories": {
+                "id": 2,
+                "name": "Mobile Covers",
+                "deletedAt": null,
+                "createdAt": "2023-12-17T18:09:21.812Z",
+                "updatedAt": "2023-12-17T18:09:21.812Z",
+                "category_id": 1,
+                "image_path": "https://firebasestorage.googleapis.com/v0/b/slash-f711b.appspot.com/o/images%2Fcategories%2F1702836560790Slash-Logo.png?alt=media&token=67fc6b14-399d-4825-872b-34536cca90f6"
+            },
+            "SizeChart": null
+        }
+    ]
+}

@@ -28,11 +28,11 @@ class Product {
       id: json['id'] ?? 0,
       name: json['name'] ?? '',
       description: json['description'] ?? '',
-      brandId: json['brandId'] ?? 0,
-      brandName: json['brandName'],
-      brandLogoUrl: json['brandLogoUrl'],
-      rating: (json['rating'] ?? 0.0).toDouble(),
-      variations: (json['variations'] as List<dynamic>?)
+      brandId: json['brand_id'] ?? 0,
+      brandName: json['Brands']['brand_name'] ?? '',
+      brandLogoUrl: json['Brands']['brand_logo_image_path'] ?? '',
+      rating: (json['product_rating'] ?? 0.0).toDouble(),
+      variations: (json['ProductVariations'] as List<dynamic>?)
               ?.map((variation) => ProductVariation.fromJson(variation))
               .toList() ??
           [],

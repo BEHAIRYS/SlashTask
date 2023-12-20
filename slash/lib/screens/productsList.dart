@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:slash/datastructures/Product.dart';
+import 'package:slash/screens/productDetails.dart';
 
 class ProductsListScreen extends StatelessWidget {
   ProductsListScreen({super.key, required this.products});
@@ -33,21 +34,46 @@ class ProductsListScreen extends StatelessWidget {
               ),
               itemCount: products.length,
               itemBuilder: (context, index) {
-                return GridTile(
-                  child: Container(
-                    margin: const EdgeInsets.all(8),
-                    decoration: BoxDecoration(
-                      border: Border.all(color: Colors.grey),
-                      borderRadius: BorderRadius.circular(8.0),
-                    ),
-                    padding: const EdgeInsets.all(8.0),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text('Name: ${products[index].name}'),
-
-                        // Add more widgets as needed
-                      ],
+                return GestureDetector(
+                  onTap: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (context) {
+                          return ProductDetailsScreen();
+                        },
+                      ),
+                    );
+                  },
+                  child: GridTile(
+                    child: Container(
+                      margin: const EdgeInsets.all(8),
+                      decoration: BoxDecoration(
+                        border: Border.all(color: Colors.grey),
+                        borderRadius: BorderRadius.circular(8.0),
+                      ),
+                      padding: const EdgeInsets.all(8.0),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Image(
+                            image: NetworkImage(
+                              products[index].variations.isNotEmpty &&
+                                      products[index]
+                                          .variations[0]
+                                          .productVarientImages
+                                          .isNotEmpty
+                                  ? products[index]
+                                      .variations[0]
+                                      .productVarientImages[0]
+                                      .imagePath
+                                  : '',
+                            ),
+                            height: 200,
+                            width: double.infinity,
+                          ),
+                          Text('Name: ${products[index].name}'),
+                        ],
+                      ),
                     ),
                   ),
                 );
