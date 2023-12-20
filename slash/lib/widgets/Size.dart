@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:slash/datastructures/ProductVariation.dart';
 
 class SizeWidget extends StatefulWidget {
-  SizeWidget({super.key, required this.values});
+  SizeWidget({super.key, required this.values, required this.changeVariation});
+  void Function(String value) changeVariation;
 
   List<String> values = [];
   @override
@@ -28,7 +29,9 @@ class _SizeWidgetState extends State<SizeWidget> {
           children: [
             for (var value in widget.values)
               TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  widget.changeVariation(value);
+                },
                 child: Text(value),
               ),
           ],

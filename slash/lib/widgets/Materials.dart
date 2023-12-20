@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 
 class MaterialWidget extends StatefulWidget {
-  MaterialWidget({super.key, required this.materials});
+  MaterialWidget(
+      {super.key, required this.materials, required this.changeVariation});
+  void Function(String value) changeVariation;
+
   List<String> materials;
   @override
   State<StatefulWidget> createState() {
@@ -20,7 +23,11 @@ class _MaterialWidgetState extends State<MaterialWidget> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             for (var material in widget.materials)
-              TextButton(onPressed: () {}, child: Text(material)),
+              TextButton(
+                  onPressed: () {
+                    widget.changeVariation(material);
+                  },
+                  child: Text(material)),
           ],
         ),
       ],

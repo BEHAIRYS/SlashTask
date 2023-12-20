@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 class ColorsWidget extends StatefulWidget {
-  ColorsWidget({super.key, required this.colors});
+  ColorsWidget(
+      {super.key, required this.colors, required this.changeVariation});
+  void Function(String value) changeVariation;
   List<String> colors;
   @override
   State<StatefulWidget> createState() {
@@ -27,14 +29,19 @@ class _ColorsWidgetState extends State<ColorsWidget> {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         for (var color in widget.colors)
-          Container(
-            margin: EdgeInsets.symmetric(horizontal: 5),
-            decoration: BoxDecoration(
-              color: hexToColor(color),
-              borderRadius: BorderRadius.circular(15),
+          GestureDetector(
+            onTap: () {
+              widget.changeVariation(color);
+            },
+            child: Container(
+              margin: EdgeInsets.symmetric(horizontal: 5),
+              decoration: BoxDecoration(
+                color: hexToColor(color),
+                borderRadius: BorderRadius.circular(15),
+              ),
+              width: 30,
+              height: 30,
             ),
-            width: 30,
-            height: 30,
           ),
       ],
     );

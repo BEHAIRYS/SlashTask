@@ -30,6 +30,17 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
     variation = widget.product.variations[0];
   }
 
+  void _changeVariation(String value) {
+    List<ProductVariation> variations;
+    variations = widget.product.variations
+        .where((element) => element.productPropertiesValues
+            .any((property) => property.value == value))
+        .toList();
+    setState(() {
+      variation = variations[0];
+    });
+  }
+
   Widget displayVariations() {
     Widget? size, color, material;
     if (widget.product.availableProperties
@@ -40,9 +51,7 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
           .forEach((property) {
         values = property.values;
       });
-      size = SizeWidget(
-        values: values,
-      );
+      size = SizeWidget(values: values, changeVariation: _changeVariation);
     }
     if (widget.product.availableProperties
         .any((property) => property.property == 'Color')) {
@@ -54,6 +63,7 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
       });
       color = ColorsWidget(
         colors: values,
+        changeVariation: _changeVariation,
       );
     }
     if (widget.product.availableProperties
@@ -66,6 +76,7 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
       });
       material = MaterialWidget(
         materials: values,
+        changeVariation: _changeVariation,
       );
     }
 
