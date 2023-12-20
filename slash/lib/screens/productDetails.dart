@@ -1,13 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:slash/datastructures/AvailableProperties.dart';
 import 'package:slash/datastructures/Product.dart';
 import 'dart:convert' as convert;
 import 'package:http/http.dart' as http;
 import 'package:slash/datastructures/ProductVariation.dart';
+import 'package:slash/datastructures/PropertyValues.dart';
 import 'package:slash/widgets/Images.dart';
+import 'package:slash/widgets/Size.dart';
 
 class ProductDetailsScreen extends StatefulWidget {
   ProductDetailsScreen({super.key, required this.product});
   Product product;
+
   @override
   State<StatefulWidget> createState() {
     return _ProductDetailsScreenState();
@@ -15,17 +19,66 @@ class ProductDetailsScreen extends StatefulWidget {
 }
 
 class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
+  ProductVariation? variation;
+  Widget? Variations;
+  @override
+  initState() {
+    super.initState();
+    fetchProductVariations();
+    variation = widget.product.variations[0];
+  }
+
+  Widget displayVariations() {
+    Widget? size, color, material;
+    if (widget.product.availableProperties
+        .any((property) => property.property == 'Size')) {
+      List<String> values = [];
+      widget.product.availableProperties
+          .where((element) => element.property == 'Size')
+          .forEach((property) {
+        values = property.values;
+      });
+      size = SizeWidget(
+        values: values,
+      );
+    }
+    if (widget.product.availableProperties
+        .any((property) => property.property == 'Color')) {
+      color = const Row(children: [Text('Select color')]);
+    }
+    if (widget.product.availableProperties
+        .any((property) => property.property == 'Materials')) {
+      material = const Row(children: [Text('Material')]);
+    }
+
+    return Column(
+      children: [
+        size ??
+            SizedBox(
+              width: 1,
+            ),
+        color ??
+            SizedBox(
+              width: 1,
+            ),
+        material ??
+            SizedBox(
+              width: 1,
+            )
+      ],
+    );
+  }
+
   List<String> getImagePaths() {
     List<String> imagePaths = [];
-    for (var variation in widget.product.variations) {
-      if (variation.productVarientImages.isNotEmpty) {
-        for (var image in variation.productVarientImages) {
-          imagePaths.add(image.imagePath);
-        }
-
-        return imagePaths;
+    if (variation!.productVarientImages.isNotEmpty) {
+      for (var image in variation!.productVarientImages) {
+        imagePaths.add(image.imagePath);
       }
+
+      return imagePaths;
     }
+
     return [];
   }
 
@@ -40,17 +93,18 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
       // Check if 'data' key exists and is a list
       if (jsonResponse.containsKey('data')) {
         List<dynamic> data = jsonResponse['data']['variations'];
+        List<dynamic> availableProperties =
+            jsonResponse['data']['avaiableProperties'];
 
         // Convert each element to a Product object
         setState(() {
           widget.product.variations =
               data.map((item) => ProductVariation.fromJson(item)).toList();
+          widget.product.availableProperties = availableProperties
+              .map((property) => AvailableProperties.fromJson(property))
+              .toList();
         });
-        for (var variation in widget.product.variations) {
-          for (var image in variation.productVarientImages) {
-            print('Image URL: ${image.imagePath}');
-          }
-        }
+        print('succeeded');
       } else {
         print('Request failed with status: ${response.statusCode}.');
       }
@@ -64,14 +118,35 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
       body: Column(
         children: [
           Container(
-            margin: EdgeInsets.all(8),
+            margin: const EdgeInsets.all(8),
             height: 400,
             child: ImagePage(imagePath: getImagePaths()),
           ),
-          Row(),
-          Row(),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(widget.product.name),
+              Image(
+                image: NetworkImage(widget.product.brandLogoUrl ?? ''),
+                height: 50,
+                width: 50,
+              )
+            ],
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                variation!.price.toString(),
+              ),
+              Text(widget.product.brandName!),
+            ],
+          ),
           ElevatedButton(
-              onPressed: fetchProductVariations, child: Text('data')),
+            onPressed: fetchProductVariations,
+            child: const Text('data'),
+          ),
+          displayVariations(),
         ],
       ),
     );

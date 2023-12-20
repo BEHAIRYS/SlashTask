@@ -1,3 +1,4 @@
+import 'package:slash/datastructures/AvailableProperties.dart';
 import 'package:slash/datastructures/ProductVariation.dart';
 import 'package:slash/datastructures/PropertyValues.dart';
 
@@ -10,7 +11,7 @@ class Product {
   final String? brandLogoUrl;
   final double rating;
   List<ProductVariation> variations;
-  final List<ProductPropertyAndValue> availableProperties;
+  List<AvailableProperties> availableProperties;
 
   Product(
       {required this.id,
@@ -36,8 +37,8 @@ class Product {
               ?.map((variation) => ProductVariation.fromJson(variation))
               .toList() ??
           [],
-      availableProperties: (json['availableProperties'] as List<dynamic>?)
-              ?.map((property) => ProductPropertyAndValue.fromJson(property))
+      availableProperties: (json['avaiableProperties'] as List<dynamic>?)
+              ?.map((property) => AvailableProperties.fromJson(property))
               .toList() ??
           [],
     );
