@@ -5,7 +5,9 @@ import 'dart:convert' as convert;
 import 'package:http/http.dart' as http;
 import 'package:slash/datastructures/ProductVariation.dart';
 import 'package:slash/datastructures/PropertyValues.dart';
+import 'package:slash/widgets/Colors.dart';
 import 'package:slash/widgets/Images.dart';
+import 'package:slash/widgets/Materials.dart';
 import 'package:slash/widgets/Size.dart';
 
 class ProductDetailsScreen extends StatefulWidget {
@@ -44,11 +46,27 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
     }
     if (widget.product.availableProperties
         .any((property) => property.property == 'Color')) {
-      color = const Row(children: [Text('Select color')]);
+      List<String> values = [];
+      widget.product.availableProperties
+          .where((element) => element.property == 'Color')
+          .forEach((property) {
+        values = property.values;
+      });
+      color = ColorsWidget(
+        colors: values,
+      );
     }
     if (widget.product.availableProperties
         .any((property) => property.property == 'Materials')) {
-      material = const Row(children: [Text('Material')]);
+      List<String> values = [];
+      widget.product.availableProperties
+          .where((element) => element.property == 'Materials')
+          .forEach((property) {
+        values = property.values;
+      });
+      material = MaterialWidget(
+        materials: values,
+      );
     }
 
     return Column(

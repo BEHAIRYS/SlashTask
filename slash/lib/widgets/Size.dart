@@ -14,12 +14,23 @@ class SizeWidget extends StatefulWidget {
 class _SizeWidgetState extends State<SizeWidget> {
   @override
   Widget build(BuildContext context) {
-    return const Column(
+    return Column(
       children: [
-        Row(
+        const Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text('Select Size'),
             Text('Size Chart'),
+          ],
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            for (var value in widget.values)
+              TextButton(
+                onPressed: () {},
+                child: Text(value),
+              ),
           ],
         )
       ],
