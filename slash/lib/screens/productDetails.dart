@@ -3,6 +3,7 @@ import 'package:slash/datastructures/Product.dart';
 import 'dart:convert' as convert;
 import 'package:http/http.dart' as http;
 import 'package:slash/datastructures/ProductVariation.dart';
+import 'package:slash/widgets/Images.dart';
 
 class ProductDetailsScreen extends StatefulWidget {
   ProductDetailsScreen({super.key, required this.product});
@@ -14,6 +15,20 @@ class ProductDetailsScreen extends StatefulWidget {
 }
 
 class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
+  List<String> getImagePaths() {
+    List<String> imagePaths = [];
+    for (var variation in widget.product.variations) {
+      if (variation.productVarientImages.isNotEmpty) {
+        for (var image in variation.productVarientImages) {
+          imagePaths.add(image.imagePath);
+        }
+
+        return imagePaths;
+      }
+    }
+    return [];
+  }
+
   Future<void> fetchProductVariations() async {
     var url = Uri.https(
         'slash-backend.onrender.com', '/product/${widget.product.id}');
@@ -31,9 +46,11 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
           widget.product.variations =
               data.map((item) => ProductVariation.fromJson(item)).toList();
         });
-
-        print(
-            'Number of books about http: ${widget.product.variations[0].productPropertiesValues[0].property}');
+        for (var variation in widget.product.variations) {
+          for (var image in variation.productVarientImages) {
+            print('Image URL: ${image.imagePath}');
+          }
+        }
       } else {
         print('Request failed with status: ${response.statusCode}.');
       }
@@ -46,9 +63,15 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
       appBar: AppBar(),
       body: Column(
         children: [
-          Container(),
+          Container(
+            margin: EdgeInsets.all(8),
+            height: 400,
+            child: ImagePage(imagePath: getImagePaths()),
+          ),
           Row(),
           Row(),
+          ElevatedButton(
+              onPressed: fetchProductVariations, child: Text('data')),
         ],
       ),
     );
