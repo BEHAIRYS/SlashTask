@@ -22,12 +22,23 @@ class ProductDetailsScreen extends StatefulWidget {
 
 class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
   ProductVariation? variation;
-  Widget? Variations;
+  Widget? variations;
+  bool isDataInitialized = false;
   @override
   initState() {
     super.initState();
-    fetchProductVariations();
-    variation = widget.product.variations[0];
+    initializeData();
+  }
+
+  Future<void> initializeData() async {
+    await fetchProductVariations();
+    setState(() {
+      isDataInitialized = true;
+      variation = widget.product.variations.isNotEmpty
+          ? widget.product.variations[0]
+          : null;
+      variations = displayVariations();
+    });
   }
 
   void _changeVariation(String value) {
@@ -43,6 +54,9 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
 
   Widget displayVariations() {
     Widget? size, color, material;
+    if (variation == null) {
+      return Container();
+    }
     if (variation!.productPropertiesValues
         .any((property) => property.property == 'Size')) {
       List<String> values = [];
@@ -82,24 +96,18 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
 
     return Column(
       children: [
-        size ??
-            SizedBox(
-              width: 1,
-            ),
-        color ??
-            SizedBox(
-              width: 1,
-            ),
-        material ??
-            SizedBox(
-              width: 1,
-            )
+        size ?? Container(),
+        color ?? Container(),
+        material ?? Container(),
       ],
     );
   }
 
   List<String> getImagePaths() {
     List<String> imagePaths = [];
+    if (variation == null) {
+      return [];
+    }
     if (variation!.productVarientImages.isNotEmpty) {
       for (var image in variation!.productVarientImages) {
         imagePaths.add(image.imagePath);
@@ -166,12 +174,12 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                variation!.price.toString(),
+                variation?.price.toString() ?? 'loading..',
               ),
-              Text(widget.product.brandName!),
+              Text(widget.product.brandName ?? 'loading..'),
             ],
           ),
-          displayVariations(),
+          if (isDataInitialized) variations ?? Container(),
         ],
       ),
     );
