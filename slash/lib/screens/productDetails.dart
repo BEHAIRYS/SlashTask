@@ -114,12 +114,15 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
           orElse: () => ProductPropertyAndValue(property: 'Color', value: ''),
         )
         .value;
+
     List<String> sizesForSelectedColor = [];
 
-    currentVariations.forEach((element) {
-      if (element.productPropertiesValues.any((property) =>
-              property.property == 'Color' &&
-              property.value == selectedColor) ||
+    widget.product.variations.forEach((element) {
+      if ((element.productPropertiesValues.any((property) =>
+                  property.property == 'Color' &&
+                  property.value == selectedColor) ||
+              !element.productPropertiesValues
+                  .any((property) => property.property == 'Color')) &&
           element.productPropertiesValues
               .any((property) => property.property == 'Size')) {
         element.productPropertiesValues
@@ -142,6 +145,7 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
             .any((property) => property.property == 'Materials')) {
       return Container();
     }
+
     String selectedColor = variation!.productPropertiesValues
         .firstWhere(
           (property) => property.property == 'Color',
@@ -151,10 +155,12 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
 
     List<String> materialsForSelectedColor = [];
 
-    currentVariations.forEach((element) {
-      if (element.productPropertiesValues.any((property) =>
-              property.property == 'Color' &&
-              property.value == selectedColor) ||
+    widget.product.variations.forEach((element) {
+      if ((element.productPropertiesValues.any((property) =>
+                  property.property == 'Color' &&
+                  property.value == selectedColor) ||
+              !element.productPropertiesValues
+                  .any((property) => property.property == 'Color')) &&
           element.productPropertiesValues
               .any((property) => property.property == 'Materials')) {
         element.productPropertiesValues
