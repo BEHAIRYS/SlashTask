@@ -57,6 +57,7 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
     if (variation == null) {
       return Container();
     }
+
     if (variation!.productPropertiesValues
         .any((property) => property.property == 'Size')) {
       List<String> values = [];
@@ -65,7 +66,10 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
           .forEach((property) {
         values.add(property.value);
       });
-      size = SizeWidget(values: values, changeVariation: _changeVariation);
+      size = SizeWidget(
+        values: values,
+        changeVariation: _changeVariation,
+      );
     }
     if (widget.product.availableProperties
         .any((property) => property.property == 'Color')) {
@@ -96,9 +100,25 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
 
     return Column(
       children: [
-        size ?? Container(),
-        color ?? Container(),
-        material ?? Container(),
+        const SizedBox(
+          height: 12,
+        ),
+        Column(
+          children: [
+            const SizedBox(
+              height: 20,
+            ),
+            color ?? Container(),
+            const SizedBox(
+              height: 12,
+            ),
+            size ?? Container(),
+            const SizedBox(
+              height: 12,
+            ),
+            material ?? Container(),
+          ],
+        ),
       ],
     );
   }
@@ -151,53 +171,66 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
-      body: Column(
-        children: [
-          Container(
-            height: 400,
-            width: double.infinity,
-            child: ImagePage(imagePath: getImagePaths()),
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      appBar: AppBar(
+        backgroundColor: Colors.black,
+      ),
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.all(10.0),
+          child: Column(
             children: [
-              Text(widget.product.name),
-              Image(
-                image: NetworkImage(widget.product.brandLogoUrl ?? ''),
-                height: 50,
-                width: 50,
-              )
-            ],
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text(
-                variation?.price.toString() ?? 'loading..',
+              Container(
+                height: 400,
+                width: double.infinity,
+                child: ImagePage(imagePath: getImagePaths()),
               ),
-              Text(widget.product.brandName ?? 'loading..'),
-            ],
-          ),
-          if (isDataInitialized) variations ?? Container(),
-          const Spacer(),
-          ExpansionTile(
-            title: const Center(child: Text('Description')),
-            children: [
-              Padding(
-                padding: const EdgeInsets.all(8),
-                child: Text(widget.product.description),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(widget.product.name),
+                  ClipOval(
+                    child: Image(
+                      image: NetworkImage(widget.product.brandLogoUrl ?? ''),
+                      height: 50,
+                      width: 50,
+                    ),
+                  )
+                ],
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    variation?.price.toString() ?? 'loading..',
+                  ),
+                  Text(widget.product.brandName ?? 'loading..'),
+                ],
+              ),
+              if (isDataInitialized) variations ?? Container(),
+              Container(
+                margin: EdgeInsets.symmetric(vertical: 8),
+                decoration: BoxDecoration(
+                  color: Colors.white12,
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: ExpansionTile(
+                  title: const Text('Description'),
+                  children: [Text(widget.product.description)],
+                ),
+              ),
+              SizedBox(
+                width: double.infinity,
+                child: ElevatedButton.icon(
+                    style: const ButtonStyle(
+                        backgroundColor:
+                            MaterialStatePropertyAll(Colors.white12)),
+                    onPressed: () {},
+                    icon: const Icon(Icons.shopping_cart_checkout_rounded),
+                    label: const Text('Add to Cart')),
               )
             ],
           ),
-          Container(
-            width: double.infinity,
-            child: ElevatedButton.icon(
-                onPressed: () {},
-                icon: const Icon(Icons.shopping_cart_checkout_rounded),
-                label: const Text('Add to Cart')),
-          )
-        ],
+        ),
       ),
     );
   }

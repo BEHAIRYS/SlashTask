@@ -28,11 +28,22 @@ class _SizeWidgetState extends State<SizeWidget> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             for (var value in widget.values)
-              TextButton(
+              ElevatedButton(
                 onPressed: () {
                   widget.changeVariation(value);
                 },
                 child: Text(value),
+                style: ButtonStyle(
+                  backgroundColor: MaterialStateProperty.resolveWith<Color>(
+                    (Set<MaterialState> states) {
+                      if (states.contains(MaterialState.pressed)) {
+                        // Color when the button is pressed
+                        return Colors.green;
+                      }
+                      return Colors.white12;
+                    },
+                  ),
+                ),
               ),
           ],
         )

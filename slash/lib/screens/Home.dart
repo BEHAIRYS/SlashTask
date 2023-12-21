@@ -14,7 +14,9 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   final colorScheme = ColorScheme.fromSeed(
-      seedColor: Colors.black, brightness: Brightness.dark);
+      seedColor: Colors.black,
+      background: Colors.black,
+      brightness: Brightness.dark);
   List<Product> products = [];
   @override
   void initState() {
@@ -53,7 +55,7 @@ class _HomeScreenState extends State<HomeScreen> {
           useMaterial3: true,
           textTheme: GoogleFonts.nunitoTextTheme(Typography.whiteCupertino)),
       home: Scaffold(
-        appBar: AppBar(),
+        appBar: AppBar(backgroundColor: Colors.black),
         body: ProductsListScreen(products: products),
       ),
     );

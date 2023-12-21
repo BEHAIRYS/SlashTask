@@ -23,7 +23,18 @@ class _MaterialWidgetState extends State<MaterialWidget> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             for (var material in widget.materials)
-              TextButton(
+              ElevatedButton(
+                  style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.resolveWith<Color>(
+                      (Set<MaterialState> states) {
+                        if (states.contains(MaterialState.pressed)) {
+                          // Color when the button is pressed
+                          return Colors.green;
+                        }
+                        return Colors.white12;
+                      },
+                    ),
+                  ),
                   onPressed: () {
                     widget.changeVariation(material);
                   },
