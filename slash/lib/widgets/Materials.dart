@@ -35,9 +35,7 @@ class _MaterialWidgetState extends State<MaterialWidget> {
                       },
                     ),
                   ),
-                  onPressed: () {
-                    widget.changeVariation(material);
-                  },
+                  onPressed: () {},
                   child: Text(material)),
           ],
         ),
