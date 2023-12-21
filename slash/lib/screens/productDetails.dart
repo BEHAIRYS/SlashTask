@@ -155,8 +155,8 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
       body: Column(
         children: [
           Container(
-            margin: const EdgeInsets.all(8),
             height: 400,
+            width: double.infinity,
             child: ImagePage(imagePath: getImagePaths()),
           ),
           Row(
@@ -180,6 +180,23 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
             ],
           ),
           if (isDataInitialized) variations ?? Container(),
+          const Spacer(),
+          ExpansionTile(
+            title: const Center(child: Text('Description')),
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(8),
+                child: Text(widget.product.description),
+              )
+            ],
+          ),
+          Container(
+            width: double.infinity,
+            child: ElevatedButton.icon(
+                onPressed: () {},
+                icon: const Icon(Icons.shopping_cart_checkout_rounded),
+                label: const Text('Add to Cart')),
+          )
         ],
       ),
     );

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:slash/datastructures/Product.dart';
 import 'package:slash/screens/productsList.dart';
 import 'dart:convert' as convert;
@@ -12,6 +13,8 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  final colorScheme = ColorScheme.fromSeed(
+      seedColor: Colors.black, brightness: Brightness.dark);
   List<Product> products = [];
   @override
   void initState() {
@@ -46,9 +49,9 @@ class _HomeScreenState extends State<HomeScreen> {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
+          colorScheme: colorScheme,
+          useMaterial3: true,
+          textTheme: GoogleFonts.nunitoTextTheme(Typography.whiteCupertino)),
       home: Scaffold(
         appBar: AppBar(),
         body: ProductsListScreen(products: products),

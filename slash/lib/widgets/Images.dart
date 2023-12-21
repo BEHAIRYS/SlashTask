@@ -29,32 +29,38 @@ class _ImagePageState extends State<ImagePage> {
                     value = (1 - (value.abs() * 0.5)).clamp(0.0, 1.0);
                   }
                   return Center(
-                    child: SizedBox(
-                      height: Curves.easeInOut.transform(value) * 200,
-                      width: Curves.easeInOut.transform(value) * 200,
-                      child: child,
-                    ),
+                    child: ClipRRect(
+                        borderRadius: BorderRadius.circular(8), child: child),
                   );
                 },
                 child: Image.network(
                   widget.imagePath[index],
-                  fit: BoxFit.cover,
+                  fit: BoxFit.contain,
                 ),
               );
             },
           ),
         ),
-        Expanded(
+        const SizedBox(
+          height: 10,
+        ),
+        Container(
+          alignment: Alignment.center,
+          height: 70,
           child: ListView.builder(
             scrollDirection: Axis.horizontal,
             itemCount: widget.imagePath.length,
             itemBuilder: (context, index) {
               return Padding(
-                padding: const EdgeInsets.all(4.0), // Adjust padding as needed
-                child: SizedBox(
-                  width: 50.0, // Adjust width as needed
-                  height: 50.0, // Adjust height as needed
-                  child: Image.network(widget.imagePath[index]),
+                padding: const EdgeInsets.all(8.0),
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(12),
+                  child: Image.network(
+                    widget.imagePath[index],
+                    fit: BoxFit.contain,
+                    height: 50,
+                    width: 50,
+                  ),
                 ),
               );
             },

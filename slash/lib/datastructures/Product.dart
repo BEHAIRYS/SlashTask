@@ -1,6 +1,5 @@
 import 'package:slash/datastructures/AvailableProperties.dart';
 import 'package:slash/datastructures/ProductVariation.dart';
-import 'package:slash/datastructures/PropertyValues.dart';
 
 class Product {
   final int id;
