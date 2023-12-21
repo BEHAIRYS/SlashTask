@@ -29,7 +29,9 @@ class _SizeWidgetState extends State<SizeWidget> {
           children: [
             for (var value in widget.values)
               ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  widget.changeVariation(value);
+                },
                 child: Text(value),
                 style: ButtonStyle(
                   backgroundColor: MaterialStateProperty.resolveWith<Color>(
