@@ -119,7 +119,7 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
     currentVariations.forEach((element) {
       if (element.productPropertiesValues.any((property) =>
               property.property == 'Color' &&
-              property.value == selectedColor) &&
+              property.value == selectedColor) ||
           element.productPropertiesValues
               .any((property) => property.property == 'Size')) {
         element.productPropertiesValues
@@ -154,7 +154,7 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
     currentVariations.forEach((element) {
       if (element.productPropertiesValues.any((property) =>
               property.property == 'Color' &&
-              property.value == selectedColor) &&
+              property.value == selectedColor) ||
           element.productPropertiesValues
               .any((property) => property.property == 'Materials')) {
         element.productPropertiesValues
