@@ -24,6 +24,8 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
   ProductVariation? variation;
   Widget? variations;
   bool isDataInitialized = false;
+  Key _sizeWidgetKey = UniqueKey();
+  List<ProductVariation> currentVariations = [];
   @override
   initState() {
     super.initState();
@@ -34,6 +36,7 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
     await fetchProductVariations();
     setState(() {
       isDataInitialized = true;
+      currentVariations = List.from(widget.product.variations);
       variation = widget.product.variations.isNotEmpty
           ? widget.product.variations[0]
           : null;
@@ -42,34 +45,27 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
   }
 
   void _changeVariation(String value) {
-    List<ProductVariation> variations;
-    variations = widget.product.variations
+    List<ProductVariation> newVariations = widget.product.variations
         .where((element) => element.productPropertiesValues
             .any((property) => property.value == value))
         .toList();
+
     setState(() {
-      variation = variations[0];
+      variation = newVariations.isNotEmpty ? newVariations[0] : null;
+      currentVariations.clear();
+      currentVariations.addAll(newVariations);
     });
+    // Print information for debugging
+    print(
+        'Selected Color: ${variation?.productPropertiesValues.firstWhere((property) => property.property == 'Color').value}');
+    print(
+        'Sizes for Selected Color: ${currentVariations.map((element) => element.productPropertiesValues.where((property) => property.property == 'Size').map((property) => property.value)).toList()}');
   }
 
   Widget displayVariations() {
     Widget? size, color, material;
     if (variation == null) {
       return Container();
-    }
-
-    if (variation!.productPropertiesValues
-        .any((property) => property.property == 'Size')) {
-      List<String> values = [];
-      variation!.productPropertiesValues
-          .where((element) => element.property == 'Size')
-          .forEach((property) {
-        values.add(property.value);
-      });
-      size = SizeWidget(
-        values: values,
-        changeVariation: _changeVariation,
-      );
     }
     if (widget.product.availableProperties
         .any((property) => property.property == 'Color')) {
@@ -85,6 +81,86 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
       );
     }
     if (variation!.productPropertiesValues
+        .any((property) => property.property == 'Color')) {
+      String selectedColor = variation!.productPropertiesValues
+          .firstWhere((property) => property.property == 'Color')
+          .value;
+      List<String> sizesForSelectedColor = [];
+      if (variation!.productPropertiesValues
+          .any((property) => property.property == 'Size')) {
+        currentVariations.forEach((element) {
+          if (element.productPropertiesValues.any((property) =>
+                  property.property == 'Color' &&
+                  property.value == selectedColor) &&
+              element.productPropertiesValues
+                  .any((property) => property.property == 'Size')) {
+            element.productPropertiesValues
+                .where((property) => property.property == 'Size')
+                .forEach((property) {
+              sizesForSelectedColor.add(property.value);
+              print(sizesForSelectedColor);
+            });
+          }
+        });
+
+        size = SizeWidget(
+          values: sizesForSelectedColor,
+          changeVariation: _changeVariation,
+        );
+      }
+      if (variation!.productPropertiesValues
+          .any((property) => property.property == 'Materials')) {
+        List<String> materialsForSelectedColor = [];
+        currentVariations.forEach((element) {
+          if (element.productPropertiesValues.any((property) =>
+                  property.property == 'Color' &&
+                  property.value == selectedColor) &&
+              element.productPropertiesValues
+                  .any((property) => property.property == 'Materials')) {
+            element.productPropertiesValues
+                .where((property) => property.property == 'Materials')
+                .forEach((property) {
+              materialsForSelectedColor.add(property.value);
+              print(materialsForSelectedColor);
+            });
+          }
+        });
+        material = MaterialWidget(
+          materials: materialsForSelectedColor,
+          changeVariation: _changeVariation,
+        );
+      }
+    } else {
+      if (variation!.productPropertiesValues
+          .any((property) => property.property == 'Size')) {
+        List<String> values = [];
+        variation!.productPropertiesValues
+            .where((element) => element.property == 'Size')
+            .forEach((property) {
+          values.add(property.value);
+        });
+        material = MaterialWidget(
+          materials: values,
+          changeVariation: _changeVariation,
+        );
+      }
+      if (variation!.productPropertiesValues
+          .any((property) => property.property == 'Materials')) {
+        List<String> values = [];
+        variation!.productPropertiesValues
+            .where((element) => element.property == 'Materials')
+            .forEach((property) {
+          values.add(property.value);
+        });
+        material = MaterialWidget(
+          materials: values,
+          changeVariation: _changeVariation,
+        );
+      }
+    }
+
+    /*
+    if (variation!.productPropertiesValues
         .any((property) => property.property == 'Materials')) {
       List<String> values = [];
       variation!.productPropertiesValues
@@ -97,6 +173,7 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
         changeVariation: _changeVariation,
       );
     }
+    */
 
     return Column(
       children: [
@@ -206,7 +283,7 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                   Text(widget.product.brandName ?? 'loading..'),
                 ],
               ),
-              if (isDataInitialized) variations ?? Container(),
+              if (isDataInitialized) displayVariations() ?? Container(),
               Container(
                 margin: EdgeInsets.symmetric(vertical: 8),
                 decoration: BoxDecoration(
